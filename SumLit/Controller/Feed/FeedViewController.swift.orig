@@ -1,0 +1,116 @@
+//
+//  FeedViewController.swift
+//  SumLit
+//
+//  Created by Robert Chung on 5/3/19.
+//  Copyright © 2019 RobbyApp. All rights reserved.
+//
+
+import UIKit
+import Parse
+
+
+
+//work on summary part here
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
+
+    
+    let summarizedWords = Summary()
+    
+    
+    //dummy news article
+    var titleOfArticle = "Qwerky Keyboard Speeds Up Typing Emoji On iOS"
+    var articleContent = "Another keyboard contender has launched on iOS hoping to convince teens to shell out a few bucks for an app that gives them quick fire access to the characters that matter most in their texting life: emoji. \nThe backstory here is that Apple finally opened up developer access to the keyboard in iOS 8 last fall. Since then we’ve seen a raft of alternative iOS keyboard apps popping up to try to garner a following.  \nThe latest of these, the Qwerky gesture-based keyboard — made by a U.K.-based dev team, puts emojis a mere swipe away from a standard Qwerty keyboard so users can speedily switch between letters and symbols as they type. \nThe numbers and punctuation screen is also positioned a Tinderish gesture away, instead of requiring the typist to precision-tap a corner key to toggle between keyboards every time they want to add in an apostrophe or punctuate their missive with a smiling poop — as is the case on the native iOS keyboard. \nQwerky’s gestures offer only incremental convenience, sure, but if your typical texting output looks something like this — qwerky - then you’re going to find the ability to shortcut between letters and emojis pretty sweet. \n“We found Swiftkey/Swype/etc are slow to reach the keys you really want (that winky face… or aubergine!).  With our keyboard, swiping left and right quickly navigates from text to emojis,” says  co-founder Ed Moyse, explaining what problem the Qwerky team set out to fix. \nAs well as letting users summon emoji with a swipe, Qwerky has some emoticon-shaped easter eggs up its sleeve. Such as if you type ‘saturdaynight’ the keyboard will sub out your letters for an emoji version of John Travolta (pictured at the top of this post). Or write ‘ciaofornow’. Or ‘SANTA’ (an Xmas launch was originally planned for Qwerky). \nNow Qwerky is by no means the only alt iOS keyboard seeking to cash in on teens’ emoticon (and GIF) <3. Other emoji keyboards launching on iOS in recent times include the place-to-go-suggesting Goji, the better laid out Emoji++, and the symbol suggesting Keymoji, to name three. But Qwerky is hoping it’s focus on speed and simplicity will help the app stand out in a crowded space. \n“We’re aiming to stand out/convince people to stay by offering a keyboard that lets you type like a human,” says Moyse. “People use a combination of text, emojis, pictures, and GIFs to express themselves, but other keyboards don’t handle this satisfactorily. \n”Qwerky is not a free app — but that’s fairly standard for smaller keyboard app makers. It’s priced at $0.99 for launch week, and $1.99 thereafter. So yes, this is absolutely about cashing in on teens wanting to send pictures of cash to each other. But that’s a sign of our emoji-loving times. \nOne word of warning: there is no word prediction with Qwerky. So depending on how much you lean on Apple’s (or others’) next word suggestion algorithms to speed your typing you might actually find it slower to bash out words on Qwerky. \nBut, then again, if you reckon emoting is > spelling anyway that’s probably not going to bother you too much."
+    
+
+    lazy var summaryWords: String = self.summarizedWords.getSummary(title: titleOfArticle, content: articleContent)
+    
+   
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 100
+    } 
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! FeedViewControllerCell
+        
+        //test to see if the labels are working correctly
+        cell.username?.text = "kevkakis"
+        cell.summaryTextView?.text = summaryWords
+        cell.userCommentTextView?.text = "Wow! Didn't know about this lol. Definitely will download Qwikly and use it"
+        return cell
+    }
+    
+
+    @IBAction func upvoteButtonClicked(_ sender: Any)
+    {
+        print("this is working inside")
+    }
+    
+    
+    @IBAction func downvoteButtonClicked(_ sender: Any)
+    {
+        print("hello")
+    }
+    
+    
+    @IBAction func commentButtonClicked(_ sender: Any)
+    {
+        print("adding comment")
+    }
+    
+    @IBAction func reportButtonClicked(_ sender: Any)
+    {
+        print("reporting")
+    }
+    
+    @IBAction func uploadButtonClicked(_ sender: Any)
+    {
+        print("uploading")
+    }
+    
+    
+    
+    //we can place the logout function in the profile. We can simply copy and paste the code there
+/*
+    @IBAction func handleLogoutPressed(_ sender: Any)
+    {
+        PFUser.logOutInBackground
+        { (error) in
+            if error != nil
+            {
+                let alert = UIAlertController(title: "Error", message: "Error in logging out. Please try again.", preferredStyle: UIAlertController.Style.alert)
+                let button = UIAlertAction(title: "Okay", style: UIAlertAction.Style.cancel, handler: nil)
+                alert.addAction(button)
+                self.present(alert, animated: true, completion: nil)
+            }
+            else
+            {
+                UserDefaults.standard.removeObject(forKey: "userLoggedIn")
+                UserDefaults.standard.synchronize()
+
+                let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+                let createAccountVariable = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
+                
+                let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                delegate.window?.rootViewController = createAccountVariable
+                delegate.rememberLogin()
+            }
+        }
+    }
+ */
+}

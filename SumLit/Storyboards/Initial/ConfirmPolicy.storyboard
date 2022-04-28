@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zUu-i9-kop">
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Confirm Policy View Controller-->
+        <scene sceneID="FnG-Ig-LnR">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmPolicyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zUu-i9-kop" customClass="ConfirmPolicyViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ckr-9Z-4ui" customClass="ConfirmPolicyView" customModule="SumLit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End User Licensing Agreement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4M0-1a-Xbc">
+                                <rect key="frame" x="41.333333333333343" y="60.000000000000007" width="331.33333333333326" height="22.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="28"/>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppU-em-nWD">
+                                <rect key="frame" x="17" y="100" width="380" height="657.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-TD-g4F">
+                                <rect key="frame" x="20.666666666666657" y="106.33333333333331" width="372.66666666666674" height="644.66666666666674"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTZ-bl-lHZ" customClass="AnimatedButton" customModule="SumLit" customModuleProvider="target">
+                                <rect key="frame" x="82.666666666666671" y="791" width="248.66666666666663" height="55"/>
+                                <color key="backgroundColor" name="SLOrange"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="dXM-dX-JeM"/>
+                                    <constraint firstAttribute="height" constant="55" id="qdM-cy-ue1">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
+                                <state key="normal" title="I agree.">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dXM-dX-JeM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
+                                    <mask key="constraints">
+                                        <include reference="dXM-dX-JeM"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="agreeToPolicy:" destination="zUu-i9-kop" eventType="touchUpInside" id="7Tq-HL-61L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ppU-em-nWD" firstAttribute="centerX" secondItem="xs3-TD-g4F" secondAttribute="centerX" id="4fj-ev-WQv"/>
+                            <constraint firstItem="4M0-1a-Xbc" firstAttribute="top" secondItem="i4W-P2-3DW" secondAttribute="top" constant="16" id="77u-zJ-Jfz"/>
+                            <constraint firstItem="4M0-1a-Xbc" firstAttribute="width" secondItem="i4W-P2-3DW" secondAttribute="width" multiplier="80%" id="7WJ-kN-QF7"/>
+                            <constraint firstItem="eTZ-bl-lHZ" firstAttribute="width" secondItem="i4W-P2-3DW" secondAttribute="width" multiplier="60%" id="B3x-nl-YNG"/>
+                            <constraint firstItem="xs3-TD-g4F" firstAttribute="width" secondItem="ckr-9Z-4ui" secondAttribute="width" multiplier="70%" id="Lmh-jH-T5P"/>
+                            <constraint firstItem="eTZ-bl-lHZ" firstAttribute="width" secondItem="i4W-P2-3DW" secondAttribute="width" multiplier="35%" priority="998" id="MGz-FV-aQp"/>
+                            <constraint firstItem="4M0-1a-Xbc" firstAttribute="centerX" secondItem="ckr-9Z-4ui" secondAttribute="centerX" id="RRB-w3-PS7"/>
+                            <constraint firstItem="xs3-TD-g4F" firstAttribute="centerY" secondItem="ckr-9Z-4ui" secondAttribute="centerY" id="TIa-OE-i0j"/>
+                            <constraint firstItem="xs3-TD-g4F" firstAttribute="height" secondItem="ckr-9Z-4ui" secondAttribute="height" multiplier="65%" id="VPa-Bh-W23"/>
+                            <constraint firstItem="eTZ-bl-lHZ" firstAttribute="top" secondItem="xs3-TD-g4F" secondAttribute="bottom" constant="40" id="XZ8-FD-BBH">
+                                <variation key="heightClass=regular-widthClass=regular" constant="48"/>
+                            </constraint>
+                            <constraint firstItem="4M0-1a-Xbc" firstAttribute="top" secondItem="i4W-P2-3DW" secondAttribute="top" constant="56" id="YlV-pt-52X"/>
+                            <constraint firstItem="xs3-TD-g4F" firstAttribute="centerX" secondItem="ckr-9Z-4ui" secondAttribute="centerX" id="bDA-14-zFB"/>
+                            <constraint firstItem="ppU-em-nWD" firstAttribute="height" secondItem="xs3-TD-g4F" secondAttribute="height" multiplier="1.02" id="eIY-KL-4ic"/>
+                            <constraint firstItem="eTZ-bl-lHZ" firstAttribute="height" secondItem="i4W-P2-3DW" secondAttribute="height" multiplier="8%" id="fFF-UI-Auh"/>
+                            <constraint firstItem="i4W-P2-3DW" firstAttribute="bottom" secondItem="eTZ-bl-lHZ" secondAttribute="bottom" constant="16" id="fX6-dQ-bFP"/>
+                            <constraint firstItem="xs3-TD-g4F" firstAttribute="height" secondItem="i4W-P2-3DW" secondAttribute="height" multiplier="70%" id="fmH-4H-3hd"/>
+                            <constraint firstItem="ppU-em-nWD" firstAttribute="centerY" secondItem="xs3-TD-g4F" secondAttribute="centerY" id="fqk-WX-wYT"/>
+                            <constraint firstItem="ppU-em-nWD" firstAttribute="width" secondItem="xs3-TD-g4F" secondAttribute="width" multiplier="1.02" id="kvS-z2-JUr"/>
+                            <constraint firstItem="xs3-TD-g4F" firstAttribute="top" secondItem="4M0-1a-Xbc" secondAttribute="bottom" constant="24" id="mGZ-9H-Sa8">
+                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="eTZ-bl-lHZ" firstAttribute="centerX" secondItem="xs3-TD-g4F" secondAttribute="centerX" id="rBh-mh-vg1"/>
+                            <constraint firstItem="xs3-TD-g4F" firstAttribute="width" secondItem="i4W-P2-3DW" secondAttribute="width" multiplier="90%" id="smv-fn-jrW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i4W-P2-3DW"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fX6-dQ-bFP"/>
+                                <exclude reference="YlV-pt-52X"/>
+                                <exclude reference="Lmh-jH-T5P"/>
+                                <exclude reference="TIa-OE-i0j"/>
+                                <exclude reference="VPa-Bh-W23"/>
+                                <exclude reference="fmH-4H-3hd"/>
+                                <exclude reference="MGz-FV-aQp"/>
+                                <exclude reference="fFF-UI-Auh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="fX6-dQ-bFP"/>
+                                <exclude reference="fFF-UI-Auh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="77u-zJ-Jfz"/>
+                                <exclude reference="YlV-pt-52X"/>
+                                <include reference="Lmh-jH-T5P"/>
+                                <include reference="TIa-OE-i0j"/>
+                                <include reference="VPa-Bh-W23"/>
+                                <exclude reference="fmH-4H-3hd"/>
+                                <exclude reference="smv-fn-jrW"/>
+                                <exclude reference="B3x-nl-YNG"/>
+                                <include reference="MGz-FV-aQp"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outlet property="agreeButton" destination="eTZ-bl-lHZ" id="aCD-7S-bq3"/>
+                            <outlet property="policyBackgroundView" destination="ppU-em-nWD" id="dHq-AF-MtG"/>
+                            <outlet property="policyTextView" destination="xs3-TD-g4F" id="MI2-SU-J0R"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPolicyView" destination="ckr-9Z-4ui" id="0ng-yM-cT9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wu2-mT-eSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263.768115942029" y="98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="SLOrange">
+            <color red="1" green="0.70599997043609619" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

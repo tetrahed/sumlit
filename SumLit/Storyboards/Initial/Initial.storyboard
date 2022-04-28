@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rit-ri-fmc">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="aFl-A6-wmG">
+            <objects>
+                <viewController storyboardIdentifier="InitialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rit-ri-fmc" customClass="InitialViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZYe-w0-O0F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="copyright" translatesAutoresizingMaskIntoConstraints="NO" id="29y-DA-gLW">
+                                <rect key="frame" x="95.5" y="836.5" width="223" height="17.5"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="OO5-m7-Gam">
+                                <rect key="frame" x="188.5" y="557" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SumlitIcon" translatesAutoresizingMaskIntoConstraints="NO" id="w67-vz-9sS">
+                                <rect key="frame" x="187" y="423" width="40" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="hP9-fq-3x0"/>
+                                    <constraint firstAttribute="width" secondItem="w67-vz-9sS" secondAttribute="height" multiplier="200:251" id="jx9-7H-oyV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2019 by Sumlit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxn-hy-hsU">
+                                <rect key="frame" x="90.5" y="824.5" width="233" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="SLOrange"/>
+                        <constraints>
+                            <constraint firstItem="VDp-dK-LYG" firstAttribute="bottom" secondItem="29y-DA-gLW" secondAttribute="bottom" constant="8" id="1FV-TY-IuF">
+                                <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                            </constraint>
+                            <constraint firstItem="w67-vz-9sS" firstAttribute="centerY" secondItem="ZYe-w0-O0F" secondAttribute="centerY" id="AEO-k3-fS3"/>
+                            <constraint firstItem="OO5-m7-Gam" firstAttribute="top" secondItem="w67-vz-9sS" secondAttribute="bottom" constant="96" id="Ent-PH-MfS"/>
+                            <constraint firstItem="hxn-hy-hsU" firstAttribute="centerX" secondItem="ZYe-w0-O0F" secondAttribute="centerX" id="X4s-72-4qm"/>
+                            <constraint firstItem="w67-vz-9sS" firstAttribute="centerX" secondItem="ZYe-w0-O0F" secondAttribute="centerX" id="Y4w-P2-yQL"/>
+                            <constraint firstItem="VDp-dK-LYG" firstAttribute="bottom" secondItem="hxn-hy-hsU" secondAttribute="bottom" constant="16" id="b4g-SV-OPP"/>
+                            <constraint firstItem="OO5-m7-Gam" firstAttribute="top" secondItem="w67-vz-9sS" secondAttribute="bottom" constant="84" id="jvh-HW-uT4"/>
+                            <constraint firstItem="29y-DA-gLW" firstAttribute="centerX" secondItem="ZYe-w0-O0F" secondAttribute="centerX" id="qPz-Ev-fva"/>
+                            <constraint firstItem="OO5-m7-Gam" firstAttribute="centerX" secondItem="ZYe-w0-O0F" secondAttribute="centerX" id="r8G-Mu-N1H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VDp-dK-LYG"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="29y-DA-gLW"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Ent-PH-MfS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Na-Pc-xqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="-124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SumlitIcon" width="200" height="251"/>
+        <image name="copyright" width="223" height="17.5"/>
+        <namedColor name="SLOrange">
+            <color red="1" green="0.70588235294117652" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

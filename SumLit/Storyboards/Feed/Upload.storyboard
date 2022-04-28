@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eLj-xQ-xBZ">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Upload View Controller-->
+        <scene sceneID="Fd1-SH-nFx">
+            <objects>
+                <viewController storyboardIdentifier="UploadViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aN3-AM-RhH" customClass="UploadViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CHD-ab-27w" customClass="UploadView" customModule="SumLit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's going on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYO-Md-HnU">
+                                <rect key="frame" x="24.000000000000014" y="152" width="251.33333333333337" height="37.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="DQc-2o-D6z">
+                                <rect key="frame" x="24" y="269.33333333333331" width="327" height="192.33333333333331"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJA-t0-zwo">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="77.333333333333329"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="18" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="GYD-hf-jBj">
+                                                <rect key="frame" x="0.0" y="29.333333333333371" width="327" height="47"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="47" id="cFY-hw-Mys"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="aN3-AM-RhH" id="khC-jz-Kh2"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7g-ey-eMT">
+                                                <rect key="frame" x="0.0" y="41.333333333333371" width="36" height="33"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                <state key="normal" title="URL">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="handleLinkButtonPressed:" destination="aN3-AM-RhH" eventType="touchUpInside" id="Dyz-uQ-hrt"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RzB-fC-Rht">
+                                                <rect key="frame" x="0.0" y="76.333333333333371" width="327" height="1"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="iGV-EM-Rly"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="GYD-hf-jBj" secondAttribute="bottom" constant="1" id="A7X-ua-du2"/>
+                                            <constraint firstAttribute="bottom" secondItem="RzB-fC-Rht" secondAttribute="bottom" id="ClT-2H-nVz"/>
+                                            <constraint firstItem="u7g-ey-eMT" firstAttribute="leading" secondItem="RJA-t0-zwo" secondAttribute="leading" id="MtI-Hi-iW6"/>
+                                            <constraint firstAttribute="bottom" secondItem="u7g-ey-eMT" secondAttribute="bottom" constant="3" id="Nlt-6X-kdm"/>
+                                            <constraint firstAttribute="trailing" secondItem="GYD-hf-jBj" secondAttribute="trailing" id="XfH-Ox-Fs9"/>
+                                            <constraint firstItem="GYD-hf-jBj" firstAttribute="leading" secondItem="RJA-t0-zwo" secondAttribute="leading" id="dyv-OW-PUR"/>
+                                            <constraint firstItem="RzB-fC-Rht" firstAttribute="leading" secondItem="RJA-t0-zwo" secondAttribute="leading" id="kKI-m5-nkP"/>
+                                            <constraint firstAttribute="trailing" secondItem="RzB-fC-Rht" secondAttribute="trailing" id="xoy-kO-tT5"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hg-F7-5mJ" customClass="AnimatedButton" customModule="SumLit" customModuleProvider="target">
+                                        <rect key="frame" x="62" y="137.33333333333337" width="203" height="55"/>
+                                        <color key="backgroundColor" name="SLOrange"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="2yV-LY-dWX"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="S4t-gv-unp"/>
+                                            <constraint firstAttribute="width" constant="200" id="oyX-OV-4K4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="2yV-LY-dWX"/>
+                                                <exclude reference="S4t-gv-unp"/>
+                                                <exclude reference="oyX-OV-4K4"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="2yV-LY-dWX"/>
+                                                <exclude reference="oyX-OV-4K4"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="27"/>
+                                            <mask key="constraints">
+                                                <exclude reference="2yV-LY-dWX"/>
+                                                <exclude reference="oyX-OV-4K4"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="processLink:" destination="aN3-AM-RhH" eventType="touchUpInside" id="mN1-Zf-zY3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8hg-F7-5mJ" firstAttribute="height" secondItem="DQc-2o-D6z" secondAttribute="height" multiplier="32%" id="8Qn-3l-iTE"/>
+                                    <constraint firstItem="RJA-t0-zwo" firstAttribute="width" secondItem="DQc-2o-D6z" secondAttribute="width" id="Hg5-PH-rRy"/>
+                                    <constraint firstItem="8hg-F7-5mJ" firstAttribute="width" relation="greaterThanOrEqual" secondItem="DQc-2o-D6z" secondAttribute="width" multiplier="35%" id="LPB-bZ-kd5"/>
+                                    <constraint firstItem="8hg-F7-5mJ" firstAttribute="width" relation="greaterThanOrEqual" secondItem="DQc-2o-D6z" secondAttribute="width" multiplier="62%" id="PaO-UL-ZeI"/>
+                                    <constraint firstItem="8hg-F7-5mJ" firstAttribute="height" secondItem="DQc-2o-D6z" secondAttribute="height" multiplier="0.32" id="WDo-JY-6lv"/>
+                                    <constraint firstItem="RJA-t0-zwo" firstAttribute="width" secondItem="DQc-2o-D6z" secondAttribute="width" id="hHV-Hi-Rla"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hg5-PH-rRy"/>
+                                        <exclude reference="hHV-Hi-Rla"/>
+                                        <exclude reference="8Qn-3l-iTE"/>
+                                        <exclude reference="LPB-bZ-kd5"/>
+                                        <exclude reference="PaO-UL-ZeI"/>
+                                        <exclude reference="WDo-JY-6lv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" alignment="center">
+                                    <mask key="constraints">
+                                        <include reference="hHV-Hi-Rla"/>
+                                        <include reference="PaO-UL-ZeI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="80">
+                                    <mask key="constraints">
+                                        <include reference="Hg5-PH-rRy"/>
+                                        <include reference="8Qn-3l-iTE"/>
+                                        <exclude reference="LPB-bZ-kd5"/>
+                                        <exclude reference="WDo-JY-6lv"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oeV-nH-hnF" firstAttribute="trailing" secondItem="DQc-2o-D6z" secondAttribute="trailing" constant="24" id="H1p-DP-k6P">
+                                <variation key="heightClass=regular-widthClass=regular" constant="56"/>
+                            </constraint>
+                            <constraint firstItem="DQc-2o-D6z" firstAttribute="height" secondItem="oeV-nH-hnF" secondAttribute="height" multiplier="0.3" id="Tap-44-vXI"/>
+                            <constraint firstItem="DQc-2o-D6z" firstAttribute="top" secondItem="CYO-Md-HnU" secondAttribute="bottom" constant="80" id="Xgl-kB-o5x">
+                                <variation key="heightClass=regular-widthClass=regular" constant="48"/>
+                            </constraint>
+                            <constraint firstItem="DQc-2o-D6z" firstAttribute="height" secondItem="oeV-nH-hnF" secondAttribute="height" multiplier="30%" id="p54-G3-X8v"/>
+                            <constraint firstItem="CYO-Md-HnU" firstAttribute="top" secondItem="oeV-nH-hnF" secondAttribute="top" constant="64" id="tK5-4y-dGx">
+                                <variation key="heightClass=regular-widthClass=regular" constant="128"/>
+                            </constraint>
+                            <constraint firstItem="DQc-2o-D6z" firstAttribute="leading" secondItem="CYO-Md-HnU" secondAttribute="leading" id="uMu-Ae-yId"/>
+                            <constraint firstItem="CYO-Md-HnU" firstAttribute="leading" secondItem="oeV-nH-hnF" secondAttribute="leading" constant="24" id="zCH-Xz-wg3">
+                                <variation key="heightClass=regular-widthClass=regular" constant="56"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oeV-nH-hnF"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="p54-G3-X8v"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="Tap-44-vXI"/>
+                                <include reference="p54-G3-X8v"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outlet property="continueButton" destination="8hg-F7-5mJ" id="ErQ-gx-uHS"/>
+                            <outlet property="linkButton" destination="u7g-ey-eMT" id="dhS-uP-QLA"/>
+                            <outlet property="newsLinkTextField" destination="GYD-hf-jBj" id="dEs-AK-uY4"/>
+                            <outlet property="titleLabel" destination="CYO-Md-HnU" id="pk5-50-jTg"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="ITl-MN-pEL">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="0bg-g5-Y1A"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="uploadView" destination="CHD-ab-27w" id="g2v-AE-QDZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfa-da-Zeg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="-41.829085457271368"/>
+        </scene>
+        <!--Upload-->
+        <scene sceneID="lGN-Kz-1Bb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eLj-xQ-xBZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Upload" image="Upload" id="WrI-r5-y1U"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zxf-uV-Hes">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aN3-AM-RhH" kind="relationship" relationship="rootViewController" id="qrc-vQ-UJg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGR-7R-gAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119.2" y="-41.829085457271368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Upload" width="30" height="30"/>
+        <namedColor name="SLOrange">
+            <color red="1" green="0.70588235294117652" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

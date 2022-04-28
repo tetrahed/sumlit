@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Black.ttf">
+            <string>Lato-Black</string>
+        </array>
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Add Comment View Controller-->
+        <scene sceneID="YpR-ht-Dkt">
+            <objects>
+                <viewController storyboardIdentifier="AddCommentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NeP-C4-wyy" customClass="AddCommentViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2DV-af-6Cw" customClass="AddCommentView" customModule="SumLit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="d6b-aH-HXH">
+                                <rect key="frame" x="24" y="100" width="269.5" height="49.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato Black" pointSize="41"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zdg-hm-qkW">
+                                <rect key="frame" x="24" y="116" width="366" height="245.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NeP-C4-wyy" id="vfv-xN-EMd"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-9C-4PT" customClass="AnimatedButton" customModule="SumLit" customModuleProvider="target">
+                                <rect key="frame" x="24" y="385.5" width="366" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="27"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitComment:" destination="NeP-C4-wyy" eventType="touchUpInside" id="ipO-e2-qpE"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Key-D3-Roa">
+                                <rect key="frame" x="178.5" y="819" width="57" height="35"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="NeP-C4-wyy" eventType="touchUpInside" id="fZd-mc-gtZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zdg-hm-qkW" firstAttribute="top" secondItem="d6b-aH-HXH" secondAttribute="bottom" constant="36" id="13g-MZ-Wi4"/>
+                            <constraint firstItem="dEJ-9C-4PT" firstAttribute="leading" secondItem="Zdg-hm-qkW" secondAttribute="leading" id="E0H-Dc-Hsv"/>
+                            <constraint firstItem="Key-D3-Roa" firstAttribute="centerX" secondItem="2DV-af-6Cw" secondAttribute="centerX" id="EAf-jj-N4b"/>
+                            <constraint firstItem="aPd-s9-wkY" firstAttribute="trailing" secondItem="Zdg-hm-qkW" secondAttribute="trailing" constant="24" id="Ehx-QX-xYX"/>
+                            <constraint firstItem="Zdg-hm-qkW" firstAttribute="top" secondItem="aPd-s9-wkY" secondAttribute="top" constant="72" id="GgT-v9-z9N"/>
+                            <constraint firstItem="dEJ-9C-4PT" firstAttribute="height" secondItem="2DV-af-6Cw" secondAttribute="height" multiplier="10%" id="JMF-jZ-QjM"/>
+                            <constraint firstItem="d6b-aH-HXH" firstAttribute="leading" secondItem="aPd-s9-wkY" secondAttribute="leading" constant="24" id="Jbs-fm-InC"/>
+                            <constraint firstItem="aPd-s9-wkY" firstAttribute="bottom" secondItem="Key-D3-Roa" secondAttribute="bottom" constant="8" id="LTL-8l-xY2"/>
+                            <constraint firstItem="Zdg-hm-qkW" firstAttribute="height" secondItem="aPd-s9-wkY" secondAttribute="height" multiplier="30%" id="QNN-jg-RLh"/>
+                            <constraint firstItem="d6b-aH-HXH" firstAttribute="top" secondItem="aPd-s9-wkY" secondAttribute="top" constant="56" id="iul-tw-Xe0"/>
+                            <constraint firstItem="Zdg-hm-qkW" firstAttribute="leading" secondItem="aPd-s9-wkY" secondAttribute="leading" constant="24" id="mQh-Z9-UbJ"/>
+                            <constraint firstItem="dEJ-9C-4PT" firstAttribute="trailing" secondItem="Zdg-hm-qkW" secondAttribute="trailing" id="mZk-R3-Y1q"/>
+                            <constraint firstItem="dEJ-9C-4PT" firstAttribute="top" secondItem="Zdg-hm-qkW" secondAttribute="bottom" constant="24" id="sSA-mC-fSN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aPd-s9-wkY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="d6b-aH-HXH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="JMF-jZ-QjM"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outlet property="commentTextView" destination="Zdg-hm-qkW" id="Jpv-xH-gtp"/>
+                            <outlet property="submitButton" destination="dEJ-9C-4PT" id="dmb-Pi-epk"/>
+                            <outlet property="titleLabel" destination="d6b-aH-HXH" id="WOZ-65-BzY"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="addCommentView" destination="2DV-af-6Cw" id="ard-zy-awU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Og-ea-y5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100.00000000000001" y="206.91964285714286"/>
+        </scene>
+    </scenes>
+</document>

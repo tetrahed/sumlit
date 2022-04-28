@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aqk-ZU-Dar">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="M3a-8R-dHn">
+            <objects>
+                <navigationController storyboardIdentifier="Profile" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aqk-ZU-Dar" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profileIcon" id="xeu-8T-RZX"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gxF-U5-67I">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BaW-c7-sZt" kind="relationship" relationship="rootViewController" id="Hvc-BP-cT1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bl1-cs-9uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453.60000000000002" y="-278.41079460269867"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="xdr-kB-IVX">
+            <objects>
+                <viewController id="BaW-c7-sZt" customClass="ProfileViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6vz-Pm-I0h" customClass="ProfileView" customModule="SumLit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5p2-QI-5Pe" userLabel="Nav Separator">
+                                <rect key="frame" x="0.0" y="88" width="414" height="0.3333333333333286"/>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.25" id="an5-Us-l1g"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Csv-bC-qqa">
+                                <rect key="frame" x="0.0" y="88.333333333333314" width="414" height="724.66666666666674"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileTableViewCell" rowHeight="308" id="tGl-Iv-ytk" customClass="ProfileTableViewCell" customModule="SumLit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="308"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tGl-Iv-ytk" id="03q-UT-NT5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="308"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="UVW-yC-pnO">
+                                                    <rect key="frame" x="0.0" y="16" width="414" height="276"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefaultBefore" translatesAutoresizingMaskIntoConstraints="NO" id="het-oV-fdx">
+                                                            <rect key="frame" x="132" y="0.0" width="150" height="150"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="het-oV-fdx" secondAttribute="height" multiplier="1:1" id="Osk-iV-4FI"/>
+                                                                <constraint firstAttribute="width" constant="150" identifier="Profile Image View Width" id="sqq-9D-4Qv"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="h6h-JJ-zDZ">
+                                                            <rect key="frame" x="0.0" y="174" width="414" height="102"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Orm-qz-vYp">
+                                                                    <rect key="frame" x="55.666666666666657" y="0.0" width="303" height="102"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="LNG-jJ-zJ4">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="303" height="41.666666666666664"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q7U-ub-7Fy">
+                                                                                    <rect key="frame" x="147.66666666666669" y="0.0" width="7.6666666666666572" height="25.333333333333332"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ZRq-zV-wCf">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="7.666666666666667" height="25.333333333333332"/>
+                                                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="27"/>
+                                                                                            </variation>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="yXf-X7-qaE" userLabel="Middle separator">
+                                                                                    <rect key="frame" x="0.0" y="41.333333333333343" width="303" height="0.3333333333333357"/>
+                                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="0.31" id="0SF-DP-X0S">
+                                                                                            <variation key="heightClass=regular-widthClass=regular" constant="0.5"/>
+                                                                                        </constraint>
+                                                                                    </constraints>
+                                                                                </view>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="DRl-my-E5Q">
+                                                                            <rect key="frame" x="0.0" y="49.666666666666657" width="303" height="52.333333333333343"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jjA-rg-LDJ">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="176" height="52.333333333333336"/>
+                                                                                    <subviews>
+                                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3Y-DN-SZK">
+                                                                                            <rect key="frame" x="51.333333333333343" y="0.0" width="73" height="33"/>
+                                                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                                                                            <state key="normal" title="Followers">
+                                                                                                <color key="titleColor" name="SLDarkGray"/>
+                                                                                            </state>
+                                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
+                                                                                            </variation>
+                                                                                        </button>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Fph-sB-zyg">
+                                                                                            <rect key="frame" x="84.666666666666686" y="33.000000000000028" width="6.3333333333333286" height="19.333333333333329"/>
+                                                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                                                            <color key="textColor" name="SLDarkGray"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="23"/>
+                                                                                            </variation>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l5z-JI-5WR">
+                                                                                    <rect key="frame" x="248" y="0.0" width="55" height="52.333333333333336"/>
+                                                                                    <subviews>
+                                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2j-aG-IS9">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="55" height="33"/>
+                                                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                                                                            <state key="normal" title="Credits">
+                                                                                                <color key="titleColor" name="SLDarkGray"/>
+                                                                                            </state>
+                                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
+                                                                                            </variation>
+                                                                                        </button>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="tEV-q2-s9f">
+                                                                                            <rect key="frame" x="24.333333333333314" y="33.000000000000028" width="6.3333333333333321" height="19.333333333333329"/>
+                                                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                                                            <color key="textColor" name="SLDarkGray"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="23"/>
+                                                                                            </variation>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" priority="999" constant="45" id="oo3-O5-01U"/>
+                                                                            </constraints>
+                                                                            <variation key="default">
+                                                                                <mask key="constraints">
+                                                                                    <exclude reference="oo3-O5-01U"/>
+                                                                                </mask>
+                                                                            </variation>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="yXf-X7-qaE" firstAttribute="width" secondItem="DRl-my-E5Q" secondAttribute="width" id="5lU-Ju-EI4"/>
+                                                                        <constraint firstItem="yXf-X7-qaE" firstAttribute="width" secondItem="jjA-rg-LDJ" secondAttribute="width" id="hHX-Ki-LYM"/>
+                                                                    </constraints>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="hHX-Ki-LYM"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=regular-widthClass=regular" spacing="8"/>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="ZNL-fK-Es5"/>
+                                                        <constraint firstItem="h6h-JJ-zDZ" firstAttribute="width" secondItem="UVW-yC-pnO" secondAttribute="width" id="deZ-9y-S2h"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="230" id="gcT-lI-azD"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="ZNL-fK-Es5"/>
+                                                            <exclude reference="gcT-lI-azD"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=regular" axis="horizontal" distribution="fill" spacing="72">
+                                                        <mask key="constraints">
+                                                            <include reference="ZNL-fK-Es5"/>
+                                                            <exclude reference="gcT-lI-azD"/>
+                                                            <exclude reference="deZ-9y-S2h"/>
+                                                        </mask>
+                                                    </variation>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fj5-MV-N8Y">
+                                                    <rect key="frame" x="0.0" y="307.66666666666669" width="414" height="0.33333333333331439"/>
+                                                    <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.29999999999999999" id="Fo0-np-b59"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fj5-MV-N8Y" firstAttribute="leading" secondItem="03q-UT-NT5" secondAttribute="leading" id="6SF-b4-BVO"/>
+                                                <constraint firstAttribute="bottom" secondItem="UVW-yC-pnO" secondAttribute="bottom" constant="16" id="9f2-yC-MmW">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                                </constraint>
+                                                <constraint firstAttribute="bottom" secondItem="Fj5-MV-N8Y" secondAttribute="bottom" id="I9o-bm-Mrh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fj5-MV-N8Y" secondAttribute="trailing" id="TMu-2O-7jt"/>
+                                                <constraint firstItem="UVW-yC-pnO" firstAttribute="width" secondItem="03q-UT-NT5" secondAttribute="width" multiplier="90%" id="Tpg-w0-q7W"/>
+                                                <constraint firstItem="UVW-yC-pnO" firstAttribute="centerX" secondItem="03q-UT-NT5" secondAttribute="centerX" id="Wld-vh-pDp"/>
+                                                <constraint firstItem="UVW-yC-pnO" firstAttribute="width" secondItem="03q-UT-NT5" secondAttribute="width" id="aqE-zi-yhc"/>
+                                                <constraint firstItem="UVW-yC-pnO" firstAttribute="top" secondItem="03q-UT-NT5" secondAttribute="top" constant="16" id="i5E-Ed-mN8"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Tpg-w0-q7W"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <mask key="constraints">
+                                                    <exclude reference="Tpg-w0-q7W"/>
+                                                    <exclude reference="aqE-zi-yhc"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="followerCountLabel" destination="Fph-sB-zyg" id="3s6-dv-0pV"/>
+                                            <outlet property="karmaCountLabel" destination="tEV-q2-s9f" id="4gW-wK-jQJ"/>
+                                            <outlet property="profileImageView" destination="het-oV-fdx" id="Xkf-3u-1gP"/>
+                                            <outlet property="profileWidthConstraint" destination="sqq-9D-4Qv" id="Tnp-6X-adg"/>
+                                            <outlet property="usernameLabel" destination="ZRq-zV-wCf" id="xzl-V8-AiZ"/>
+                                            <outlet property="viewFollowerButton" destination="v3Y-DN-SZK" id="XdS-Cw-U5q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedTableViewCell" rowHeight="452" id="KXE-hd-hcY" customClass="FeedTableViewCell" customModule="SumLit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="336" width="414" height="452"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KXE-hd-hcY" id="xdL-Ah-5iE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="452"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agV-uh-YsQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="444"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voC-W5-EO2">
+                                                            <rect key="frame" x="8" y="15.999999999999993" width="328" height="109.33333333333331"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="28"/>
+                                                            </variation>
+                                                        </textView>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="750" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PK-hE-5sM">
+                                                            <rect key="frame" x="8" y="125.33333333333331" width="398" height="124"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, s ci ad i p si pi si zi fi wp i vi si SD FS BX VXi WW Ze Ze Pe Pe ca ca p e pee Lorem ipsum dolor sit er elit lamet, s ci ad i p si pi si zi fi wp i vi si SD FS BX VX WW Ze Ze Pe Pe ca ca p e pee </string>
+                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="23"/>
+                                                            </variation>
+                                                        </textView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upvoteBox" translatesAutoresizingMaskIntoConstraints="NO" id="rEz-eV-n1r">
+                                                            <rect key="frame" x="348" y="0.0" width="66" height="127"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="rEz-eV-n1r" secondAttribute="height" multiplier="64:123" id="YTJ-zn-ei0"/>
+                                                                <constraint firstAttribute="width" constant="66" id="f0Q-Nj-4nf"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8C-RQ-eEz">
+                                                            <rect key="frame" x="365" y="8" width="34.333333333333314" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="DVh-Ik-ted">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                                </constraint>
+                                                                <constraint firstAttribute="width" constant="50" id="OEi-iv-SnW"/>
+                                                            </constraints>
+                                                            <state key="normal" image="upvoteDefault"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="OEi-iv-SnW"/>
+                                                                </mask>
+                                                            </variation>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <mask key="constraints">
+                                                                    <include reference="OEi-iv-SnW"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYz-id-Ckx">
+                                                            <rect key="frame" x="366" y="89" width="32" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="fDN-A5-GZd"/>
+                                                            </constraints>
+                                                            <state key="normal" image="downvoteDefault"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="fDN-A5-GZd"/>
+                                                                </mask>
+                                                            </variation>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <mask key="constraints">
+                                                                    <include reference="fDN-A5-GZd"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YKB-In-Uty">
+                                                            <rect key="frame" x="354" y="52.666666666666664" width="55" height="21.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
+                                                            </variation>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yzG-ul-2bQ" userLabel="Comment Area">
+                                                            <rect key="frame" x="8" y="257.33333333333331" width="398" height="111.66666666666669"/>
+                                                            <subviews>
+                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z5-fz-ZTk">
+                                                                    <rect key="frame" x="357.66666666666669" y="0.0" width="40.333333333333314" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                                                    </variation>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-ee-kTj" userLabel="Comment Background">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="111.66666666666667"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6cm-jL-hlw">
+                                                                            <rect key="frame" x="16" y="8" width="366" height="95.666666666666671"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-yf-7PU">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="60.333333333333336"/>
+                                                                                    <subviews>
+                                                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vV-R8-tMn">
+                                                                                            <rect key="frame" x="0.0" y="15.333333333333371" width="74" height="30"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="height" constant="30" id="0yt-Rx-qa0"/>
+                                                                                            </constraints>
+                                                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                                                                            <state key="normal" title="Username">
+                                                                                                <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                                            </state>
+                                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="21"/>
+                                                                                            </variation>
+                                                                                        </button>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jik-s7-z3c">
+                                                                                            <rect key="frame" x="332.66666666666669" y="21.666666666666686" width="33.333333333333314" height="17"/>
+                                                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                                                            <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                                                                                            </variation>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Text View" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zID-Mc-huA">
+                                                                                    <rect key="frame" x="0.0" y="60.333333333333371" width="366" height="35.333333333333343"/>
+                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                                                                    </variation>
+                                                                                </textView>
+                                                                            </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstItem="zID-Mc-huA" firstAttribute="width" secondItem="6cm-jL-hlw" secondAttribute="width" id="igf-qc-Mmz"/>
+                                                                                <constraint firstItem="hX4-yf-7PU" firstAttribute="width" secondItem="6cm-jL-hlw" secondAttribute="width" id="xTI-OS-V3Q"/>
+                                                                            </constraints>
+                                                                            <variation key="heightClass=regular-widthClass=regular" spacing="8"/>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" name="SLPostOpinion"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="6cm-jL-hlw" secondAttribute="bottom" constant="8" id="ALo-bo-xeb">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="16"/>
+                                                                        </constraint>
+                                                                        <constraint firstItem="6cm-jL-hlw" firstAttribute="top" secondItem="tp6-ee-kTj" secondAttribute="top" constant="8" id="PRo-D2-cCM">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="16"/>
+                                                                        </constraint>
+                                                                        <constraint firstAttribute="trailing" secondItem="6cm-jL-hlw" secondAttribute="trailing" constant="16" id="nVy-q0-kO1"/>
+                                                                        <constraint firstItem="6cm-jL-hlw" firstAttribute="leading" secondItem="tp6-ee-kTj" secondAttribute="leading" constant="16" id="sPx-P6-Q2D"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="tp6-ee-kTj" firstAttribute="width" secondItem="yzG-ul-2bQ" secondAttribute="width" id="T6t-UP-ruT"/>
+                                                            </constraints>
+                                                            <variation key="heightClass=regular-widthClass=regular" spacing="16"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Kvn-Ef-AeB" userLabel="Bottom Buttons">
+                                                            <rect key="frame" x="8" y="377" width="398" height="55"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJ8-K4-c4L">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="55"/>
+                                                                    <color key="backgroundColor" name="SLPostButtons"/>
+                                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
+                                                                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                                    <state key="normal" title="Link">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
+                                                                    </variation>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="249" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDM-gJ-J3P" customClass="AnimatedButton" customModule="SumLit" customModuleProvider="target">
+                                                                    <rect key="frame" x="338" y="0.0" width="60" height="55"/>
+                                                                    <color key="backgroundColor" name="SLPostButtons"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="80" id="9uz-kt-s07">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="90"/>
+                                                                        </constraint>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="mTN-HQ-UCu">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                                        </constraint>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="vEi-Vh-umu"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                                    <state key="normal" image="Comment"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="transformScale">
+                                                                            <real key="value" value="0.97999999999999998"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="9uz-kt-s07"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                                                        <mask key="constraints">
+                                                                            <include reference="9uz-kt-s07"/>
+                                                                            <exclude reference="vEi-Vh-umu"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="yJ8-K4-c4L" firstAttribute="height" secondItem="qDM-gJ-J3P" secondAttribute="height" id="tfX-uC-p6W"/>
+                                                                <constraint firstAttribute="height" constant="55" id="xhj-F9-9WQ">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                                                                </constraint>
+                                                            </constraints>
+                                                            <variation key="heightClass=regular-widthClass=regular" spacing="10"/>
+                                                        </stackView>
+                                                        <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bO7-al-laZ" customClass="GradientView" customModule="SumLit" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="130" width="398" height="50"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="O4Q-Xk-A8q"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRP-cj-sFX">
+                                                            <rect key="frame" x="8" y="130" width="398" height="50"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                                            <state key="normal" title="Show more">
+                                                                <color key="titleColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="handleShowMore:" destination="KXE-hd-hcY" eventType="touchUpInside" id="3k7-en-But"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="yzG-ul-2bQ" firstAttribute="trailing" secondItem="0PK-hE-5sM" secondAttribute="trailing" id="1dp-Rh-geS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rEz-eV-n1r" secondAttribute="trailing" id="2TC-4d-DAI"/>
+                                                        <constraint firstItem="UYz-id-Ckx" firstAttribute="bottom" secondItem="rEz-eV-n1r" secondAttribute="bottom" constant="-8" id="2kJ-LP-iPy"/>
+                                                        <constraint firstItem="BRP-cj-sFX" firstAttribute="leading" secondItem="bO7-al-laZ" secondAttribute="leading" id="4Qv-7c-ena"/>
+                                                        <constraint firstItem="p8C-RQ-eEz" firstAttribute="centerX" secondItem="rEz-eV-n1r" secondAttribute="centerX" constant="1" id="9UD-Rl-av4"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="0PK-hE-5sM" secondAttribute="trailing" id="AcF-Yb-Bl1"/>
+                                                        <constraint firstItem="BRP-cj-sFX" firstAttribute="top" secondItem="bO7-al-laZ" secondAttribute="top" id="Fvv-NX-s1c"/>
+                                                        <constraint firstItem="Kvn-Ef-AeB" firstAttribute="trailing" secondItem="yzG-ul-2bQ" secondAttribute="trailing" id="GX5-gS-gEX"/>
+                                                        <constraint firstItem="rEz-eV-n1r" firstAttribute="leading" secondItem="voC-W5-EO2" secondAttribute="trailing" constant="12" id="HcQ-5l-mv2">
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                                                        </constraint>
+                                                        <constraint firstItem="yzG-ul-2bQ" firstAttribute="top" secondItem="0PK-hE-5sM" secondAttribute="bottom" constant="8" id="I2A-EF-R1u"/>
+                                                        <constraint firstItem="YKB-In-Uty" firstAttribute="centerY" secondItem="rEz-eV-n1r" secondAttribute="centerY" id="IhR-II-R5c"/>
+                                                        <constraint firstItem="BRP-cj-sFX" firstAttribute="bottom" secondItem="bO7-al-laZ" secondAttribute="bottom" id="JQ3-kJ-7cx"/>
+                                                        <constraint firstItem="YKB-In-Uty" firstAttribute="leading" secondItem="rEz-eV-n1r" secondAttribute="leading" constant="6" id="Kwd-EI-HX7"/>
+                                                        <constraint firstItem="voC-W5-EO2" firstAttribute="top" secondItem="agV-uh-YsQ" secondAttribute="topMargin" constant="8" id="PUD-Xl-MyP">
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                                                        </constraint>
+                                                        <constraint firstItem="0PK-hE-5sM" firstAttribute="trailing" secondItem="voC-W5-EO2" secondAttribute="trailing" id="XAU-PL-ccf"/>
+                                                        <constraint firstItem="BRP-cj-sFX" firstAttribute="trailing" secondItem="bO7-al-laZ" secondAttribute="trailing" id="Ykc-d7-bpH"/>
+                                                        <constraint firstItem="rEz-eV-n1r" firstAttribute="top" secondItem="agV-uh-YsQ" secondAttribute="top" id="Zib-fh-LCf"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Kvn-Ef-AeB" secondAttribute="bottom" constant="12" id="Zwx-k7-bpy">
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                                                        </constraint>
+                                                        <constraint firstItem="UYz-id-Ckx" firstAttribute="centerX" secondItem="rEz-eV-n1r" secondAttribute="centerX" constant="1" id="bwC-Ky-6dI"/>
+                                                        <constraint firstItem="YKB-In-Uty" firstAttribute="trailing" secondItem="rEz-eV-n1r" secondAttribute="trailing" constant="-5" id="cWk-bJ-kfA"/>
+                                                        <constraint firstItem="0PK-hE-5sM" firstAttribute="leading" secondItem="voC-W5-EO2" secondAttribute="leading" id="cpk-LF-7HB"/>
+                                                        <constraint firstItem="bO7-al-laZ" firstAttribute="trailing" secondItem="0PK-hE-5sM" secondAttribute="trailing" id="eRv-2G-pC7"/>
+                                                        <constraint firstItem="bO7-al-laZ" firstAttribute="leading" secondItem="0PK-hE-5sM" secondAttribute="leading" id="j5Q-eT-lIK"/>
+                                                        <constraint firstItem="voC-W5-EO2" firstAttribute="leading" secondItem="agV-uh-YsQ" secondAttribute="leadingMargin" id="olk-BB-lJu">
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="48"/>
+                                                        </constraint>
+                                                        <constraint firstItem="0PK-hE-5sM" firstAttribute="top" secondItem="voC-W5-EO2" secondAttribute="bottom" id="qMx-4k-KBp"/>
+                                                        <constraint firstItem="bO7-al-laZ" firstAttribute="bottom" secondItem="0PK-hE-5sM" secondAttribute="bottom" id="tIe-4u-AtA"/>
+                                                        <constraint firstItem="UYz-id-Ckx" firstAttribute="height" secondItem="p8C-RQ-eEz" secondAttribute="height" id="tJJ-1e-Sp4"/>
+                                                        <constraint firstItem="Kvn-Ef-AeB" firstAttribute="top" secondItem="yzG-ul-2bQ" secondAttribute="bottom" constant="8" id="ubt-9P-iLC">
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="16"/>
+                                                        </constraint>
+                                                        <constraint firstItem="yzG-ul-2bQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rEz-eV-n1r" secondAttribute="bottom" constant="24" id="v10-wI-5Vl"/>
+                                                        <constraint firstItem="yzG-ul-2bQ" firstAttribute="leading" secondItem="0PK-hE-5sM" secondAttribute="leading" id="wKE-Mb-09S"/>
+                                                        <constraint firstItem="Kvn-Ef-AeB" firstAttribute="leading" secondItem="yzG-ul-2bQ" secondAttribute="leading" id="wh3-7z-MPs"/>
+                                                        <constraint firstItem="p8C-RQ-eEz" firstAttribute="top" secondItem="rEz-eV-n1r" secondAttribute="top" constant="8" id="z71-N7-FCs"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="subviews">
+                                                            <exclude reference="bO7-al-laZ"/>
+                                                            <exclude reference="BRP-cj-sFX"/>
+                                                        </mask>
+                                                        <mask key="constraints">
+                                                            <exclude reference="XAU-PL-ccf"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <mask key="subviews">
+                                                            <exclude reference="bO7-al-laZ"/>
+                                                            <exclude reference="BRP-cj-sFX"/>
+                                                        </mask>
+                                                        <mask key="constraints">
+                                                            <exclude reference="AcF-Yb-Bl1"/>
+                                                            <include reference="XAU-PL-ccf"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVq-xK-z5F">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" id="Ikr-QY-PTS"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" name="SLPostSeparator"/>
+                                            <constraints>
+                                                <constraint firstItem="UVq-xK-z5F" firstAttribute="top" secondItem="xdL-Ah-5iE" secondAttribute="top" id="0eA-ee-YgC"/>
+                                                <constraint firstItem="agV-uh-YsQ" firstAttribute="top" secondItem="xdL-Ah-5iE" secondAttribute="top" id="D0P-kG-iir"/>
+                                                <constraint firstItem="UVq-xK-z5F" firstAttribute="leading" secondItem="xdL-Ah-5iE" secondAttribute="leading" id="JHx-nu-mRS"/>
+                                                <constraint firstItem="agV-uh-YsQ" firstAttribute="leading" secondItem="xdL-Ah-5iE" secondAttribute="leading" id="LeL-1C-aiB"/>
+                                                <constraint firstAttribute="bottom" secondItem="agV-uh-YsQ" secondAttribute="bottom" constant="8" id="RfG-hj-9sP"/>
+                                                <constraint firstAttribute="trailing" secondItem="UVq-xK-z5F" secondAttribute="trailing" id="lfa-fD-5ts"/>
+                                                <constraint firstAttribute="trailing" secondItem="agV-uh-YsQ" secondAttribute="trailing" id="yhl-YZ-OYz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleTitleTextView" destination="voC-W5-EO2" id="d5d-Ua-6Re"/>
+                                            <outlet property="borderShadowView" destination="agV-uh-YsQ" id="lI7-uS-iGI"/>
+                                            <outlet property="commentBackgroundView" destination="tp6-ee-kTj" id="fM7-69-tPY"/>
+                                            <outlet property="commentButton" destination="qDM-gJ-J3P" id="icw-Sp-pfV"/>
+                                            <outlet property="commentCharacterCountLabel" destination="0Z5-fz-ZTk" id="CzL-vm-Mbs"/>
+                                            <outlet property="commentTextView" destination="zID-Mc-huA" id="UVj-MT-Pmh"/>
+                                            <outlet property="downvoteButton" destination="UYz-id-Ckx" id="bBc-di-Cms"/>
+                                            <outlet property="linkButton" destination="yJ8-K4-c4L" id="a7Q-Ru-Hbr"/>
+                                            <outlet property="showMoreButton" destination="BRP-cj-sFX" id="hxZ-Hv-Ads"/>
+                                            <outlet property="summaryTextView" destination="0PK-hE-5sM" id="By4-eS-6dv"/>
+                                            <outlet property="timeStampLabel" destination="jik-s7-z3c" id="cvq-SW-Q4q"/>
+                                            <outlet property="upvoteBoxImageView" destination="rEz-eV-n1r" id="1HQ-Q0-Uud"/>
+                                            <outlet property="upvoteBoxWidthConstraint" destination="f0Q-Nj-4nf" id="5Je-Su-BcD"/>
+                                            <outlet property="upvoteButton" destination="p8C-RQ-eEz" id="XlO-Qz-Ita"/>
+                                            <outlet property="upvoteCountLabel" destination="YKB-In-Uty" id="OyT-Xb-wo9"/>
+                                            <outlet property="usernameButton" destination="0vV-R8-tMn" id="4w2-XM-FZJ"/>
+                                            <outletCollection property="gradientRelatedViews" destination="bO7-al-laZ" collectionClass="NSMutableArray" id="ySp-xZ-14O"/>
+                                            <outletCollection property="gradientRelatedViews" destination="BRP-cj-sFX" collectionClass="NSMutableArray" id="mKT-BV-zMR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BaW-c7-sZt" id="bAA-ir-dkD"/>
+                                    <outlet property="delegate" destination="BaW-c7-sZt" id="O9c-VM-FZH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NK2-vx-9Dl" firstAttribute="trailing" secondItem="5p2-QI-5Pe" secondAttribute="trailing" id="Hzy-iq-4SN"/>
+                            <constraint firstItem="Csv-bC-qqa" firstAttribute="top" secondItem="5p2-QI-5Pe" secondAttribute="bottom" id="N5h-WP-I9U"/>
+                            <constraint firstItem="5p2-QI-5Pe" firstAttribute="leading" secondItem="NK2-vx-9Dl" secondAttribute="leading" id="ZkF-QC-ids"/>
+                            <constraint firstItem="NK2-vx-9Dl" firstAttribute="bottom" secondItem="Csv-bC-qqa" secondAttribute="bottom" id="bw5-pU-ogn"/>
+                            <constraint firstItem="NK2-vx-9Dl" firstAttribute="trailing" secondItem="Csv-bC-qqa" secondAttribute="trailing" id="hfC-tE-Cah"/>
+                            <constraint firstItem="Csv-bC-qqa" firstAttribute="leading" secondItem="NK2-vx-9Dl" secondAttribute="leading" id="rPw-rr-gvC"/>
+                            <constraint firstItem="5p2-QI-5Pe" firstAttribute="top" secondItem="NK2-vx-9Dl" secondAttribute="top" id="sNm-Cl-EXN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NK2-vx-9Dl"/>
+                        <connections>
+                            <outlet property="tableView" destination="Csv-bC-qqa" id="ffq-3h-q2K"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="UFi-Sk-u5c">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ivY-hV-JA1"/>
+                        <barButtonItem key="leftBarButtonItem" image="Setting" id="PFj-Cf-eEH">
+                            <connections>
+                                <action selector="viewSettings:" destination="BaW-c7-sZt" id="0Kr-bC-OV5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Sort" id="Tl5-ac-PII">
+                            <connections>
+                                <action selector="filterContent:" destination="BaW-c7-sZt" id="riI-kf-DPW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileView" destination="6vz-Pm-I0h" id="6YH-So-Iv7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMO-gG-YmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="-251.23152709359607"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Comment" width="30" height="30"/>
+        <image name="Setting" width="36" height="36"/>
+        <image name="Sort" width="36" height="36"/>
+        <image name="downvoteDefault" width="32" height="18.666666030883789"/>
+        <image name="profileDefaultBefore" width="182" height="182"/>
+        <image name="profileIcon" width="36" height="36"/>
+        <image name="upvoteBox" width="64" height="123"/>
+        <image name="upvoteDefault" width="34.333332061767578" height="19.666666030883789"/>
+        <namedColor name="SLDarkGray">
+            <color red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SLPostButtons">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SLPostOpinion">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SLPostSeparator">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

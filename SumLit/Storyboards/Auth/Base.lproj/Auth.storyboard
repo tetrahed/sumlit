@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z7c-tt-yAd">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Black.ttf">
+            <string>Lato-Black</string>
+        </array>
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="LoginView" customModule="SumLit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Welcome to\nSum" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1uf-cz-J8g">
+                                <rect key="frame" x="36" y="88" width="309" height="95.666666666666686"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="1am-bF-kcq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato Black" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1am-bF-kcq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Lato-Black" family="Lato Black" pointSize="67"/>
+                                    <mask key="constraints">
+                                        <include reference="1am-bF-kcq"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzE-zY-b7h" customClass="AnimatedButton" customModule="SumLit" customModuleProvider="target">
+                                <rect key="frame" x="78" y="446.66666666666669" width="225" height="55"/>
+                                <color key="backgroundColor" name="SLOrange"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="4l4-az-acy"/>
+                                    <constraint firstAttribute="height" constant="55" id="SfX-eJ-uvZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="65" id="WhB-Wk-dbm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4l4-az-acy"/>
+                                        <exclude reference="SfX-eJ-uvZ"/>
+                                        <exclude reference="WhB-Wk-dbm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="SfX-eJ-uvZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="40"/>
+                                    <mask key="constraints">
+                                        <exclude reference="4l4-az-acy"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="handleLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QBW-6k-LKW"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qxA-dq-ckn">
+                                <rect key="frame" x="36" y="223.66666666666663" width="309" height="167"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="1eR-8S-Tjw">
+                                        <rect key="frame" x="0.0" y="0.0" width="309" height="106"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="1tD-bE-av2">
+                                                <rect key="frame" x="0.0" y="0.0" width="309" height="35"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="xyC-ox-9LJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="309" height="25"/>
+                                                        <subviews>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dfn-66-xEx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="25"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="26"/>
+                                                                </variation>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="21" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rxy-Vv-zBo">
+                                                                <rect key="frame" x="61.666666666666671" y="0.0" width="247.33333333333331" height="25"/>
+                                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="26"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DQe-8i-voz"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYz-pd-arO">
+                                                        <rect key="frame" x="0.0" y="34.000000000000028" width="309" height="1"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-7h-vYs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="309" height="1"/>
+                                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="My8-Wo-BvP"/>
+                                                                </constraints>
+                                                                <viewLayoutGuide key="safeArea" id="BTw-bu-7Ca"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Pzs-7h-vYs" firstAttribute="height" secondItem="iYz-pd-arO" secondAttribute="height" id="2OC-I7-SIZ"/>
+                                                            <constraint firstAttribute="height" constant="1" id="n2C-NJ-A1E"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Pzs-7h-vYs" firstAttribute="leading" secondItem="1tD-bE-av2" secondAttribute="leading" id="0ZL-JG-ADf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Pzs-7h-vYs" secondAttribute="trailing" id="7D3-sn-8Hf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Pzs-7h-vYs" secondAttribute="bottom" id="zQq-Rz-JEq"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="HCU-Hw-752">
+                                                <rect key="frame" x="0.0" y="71.000000000000028" width="309" height="35"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="cla-1L-lIn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="309" height="25"/>
+                                                        <subviews>
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="a86-DL-3bz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="25"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="26"/>
+                                                                </variation>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="10" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nGW-J9-8dJ">
+                                                                <rect key="frame" x="101.66666666666664" y="0.0" width="207.33333333333337" height="25"/>
+                                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="26"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uO5-vk-QlI"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDH-rk-5qy">
+                                                        <rect key="frame" x="0.0" y="34" width="309" height="1"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-5V-mrn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="309" height="1"/>
+                                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="Coq-kF-IDG"/>
+                                                                </constraints>
+                                                                <viewLayoutGuide key="safeArea" id="Esv-bN-1ww"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="0DP-RS-Gyo"/>
+                                                            <constraint firstItem="OA7-5V-mrn" firstAttribute="height" secondItem="TDH-rk-5qy" secondAttribute="height" id="sUK-rs-82g"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="QqG-kK-KyW" firstAttribute="trailing" secondItem="OA7-5V-mrn" secondAttribute="trailing" id="er7-LX-04G"/>
+                                                    <constraint firstItem="QqG-kK-KyW" firstAttribute="bottom" secondItem="OA7-5V-mrn" secondAttribute="bottom" id="kyC-7n-Uwe"/>
+                                                    <constraint firstItem="OA7-5V-mrn" firstAttribute="leading" secondItem="QqG-kK-KyW" secondAttribute="leading" id="wvp-Pl-tGP"/>
+                                                </constraints>
+                                                <viewLayoutGuide key="safeArea" id="QqG-kK-KyW"/>
+                                            </stackView>
+                                        </subviews>
+                                        <variation key="heightClass=regular-widthClass=regular" axis="horizontal" spacing="9"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="LGr-g6-zgj">
+                                        <rect key="frame" x="0.0" y="130.00000000000003" width="309" height="37"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JE-vt-kFs">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="37"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato Light" pointSize="21"/>
+                                                <state key="normal" title="Sign up">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato Light" pointSize="36"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="qBt-dg-ZCg" kind="show" id="0WR-cz-vmT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyJ-Yd-9Qr">
+                                                <rect key="frame" x="138" y="0.0" width="171" height="37"/>
+                                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato Light" pointSize="21"/>
+                                                <state key="normal" title="Forgot password?">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato Light" pointSize="36"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="km0-O9-gH8" kind="show" id="sZM-K0-Xf8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="72"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hl3-7E-jJc">
+                                <rect key="frame" x="129" y="735" width="117" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="OSW-K9-Dvc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <state key="normal" title="Anonymous login">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="signInAsAnonymous:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1d-a7-Jqs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1uf-cz-J8g" secondAttribute="trailing" symbolic="YES" id="0Ti-0X-uB7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qxA-dq-ckn" secondAttribute="trailing" constant="30" id="2IH-Ai-a3i">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                            </constraint>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="leading" secondItem="qxA-dq-ckn" secondAttribute="leading" id="2bE-Hj-VKh"/>
+                            <constraint firstItem="1uf-cz-J8g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="9b2-Qk-Skf">
+                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="zzE-zY-b7h" secondAttribute="bottom" id="A8x-3N-TPa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qxA-dq-ckn" secondAttribute="trailing" constant="72" id="AAS-lO-VvJ"/>
+                            <constraint firstItem="qxA-dq-ckn" firstAttribute="top" secondItem="1uf-cz-J8g" secondAttribute="bottom" constant="40" id="CTS-qH-uLs">
+                                <variation key="heightClass=regular-widthClass=regular" constant="63"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1uf-cz-J8g" secondAttribute="trailing" symbolic="YES" id="GmO-WT-p3z"/>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="13%" id="LJQ-E8-PB0"/>
+                            <constraint firstItem="Hl3-7E-jJc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QAw-0o-sSS"/>
+                            <constraint firstItem="qxA-dq-ckn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="QHi-80-sDL">
+                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                            </constraint>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="centerX" secondItem="qxA-dq-ckn" secondAttribute="centerX" id="Qsb-Vk-t6X"/>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="UJo-gP-tcc"/>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="ZWt-uV-L2q"/>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="60%" id="dhz-Fw-k1n"/>
+                            <constraint firstItem="1uf-cz-J8g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-30" id="eW7-pj-w0x"/>
+                            <constraint firstItem="Hl3-7E-jJc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="eYv-mh-Dqp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hl3-7E-jJc" secondAttribute="bottom" constant="8" id="eu6-hA-4B2"/>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="8%" id="fSY-OX-z67"/>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="width" secondItem="qxA-dq-ckn" secondAttribute="width" multiplier="0.5" id="g6J-lM-orn"/>
+                            <constraint firstItem="Hl3-7E-jJc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="gpj-Qn-Vwc"/>
+                            <constraint firstItem="Hl3-7E-jJc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="hdm-zQ-9cQ"/>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="centerX" secondItem="qxA-dq-ckn" secondAttribute="centerX" id="jFh-go-3sY"/>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="top" secondItem="qxA-dq-ckn" secondAttribute="bottom" constant="56" id="qQh-03-gNV">
+                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                            </constraint>
+                            <constraint firstItem="1uf-cz-J8g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s2x-Qm-yU0">
+                                <variation key="heightClass=regular-widthClass=regular" constant="108"/>
+                            </constraint>
+                            <constraint firstItem="zzE-zY-b7h" firstAttribute="trailing" secondItem="qxA-dq-ckn" secondAttribute="trailing" id="vZ2-3e-Ge2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0Ti-0X-uB7"/>
+                                <exclude reference="2IH-Ai-a3i"/>
+                                <exclude reference="AAS-lO-VvJ"/>
+                                <exclude reference="eu6-hA-4B2"/>
+                                <exclude reference="2bE-Hj-VKh"/>
+                                <exclude reference="A8x-3N-TPa"/>
+                                <exclude reference="LJQ-E8-PB0"/>
+                                <exclude reference="Qsb-Vk-t6X"/>
+                                <exclude reference="ZWt-uV-L2q"/>
+                                <exclude reference="dhz-Fw-k1n"/>
+                                <exclude reference="fSY-OX-z67"/>
+                                <exclude reference="g6J-lM-orn"/>
+                                <exclude reference="jFh-go-3sY"/>
+                                <exclude reference="vZ2-3e-Ge2"/>
+                                <exclude reference="eYv-mh-Dqp"/>
+                                <exclude reference="gpj-Qn-Vwc"/>
+                                <exclude reference="hdm-zQ-9cQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="2IH-Ai-a3i"/>
+                                <include reference="eu6-hA-4B2"/>
+                                <exclude reference="UJo-gP-tcc"/>
+                                <include reference="dhz-Fw-k1n"/>
+                                <exclude reference="fSY-OX-z67"/>
+                                <include reference="jFh-go-3sY"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="2IH-Ai-a3i"/>
+                                <include reference="AAS-lO-VvJ"/>
+                                <exclude reference="eu6-hA-4B2"/>
+                                <include reference="9b2-Qk-Skf"/>
+                                <exclude reference="eW7-pj-w0x"/>
+                                <exclude reference="2bE-Hj-VKh"/>
+                                <include reference="A8x-3N-TPa"/>
+                                <include reference="LJQ-E8-PB0"/>
+                                <include reference="Qsb-Vk-t6X"/>
+                                <include reference="ZWt-uV-L2q"/>
+                                <exclude reference="fSY-OX-z67"/>
+                                <exclude reference="qQh-03-gNV"/>
+                                <exclude reference="vZ2-3e-Ge2"/>
+                                <exclude reference="QAw-0o-sSS"/>
+                                <include reference="eYv-mh-Dqp"/>
+                                <include reference="gpj-Qn-Vwc"/>
+                                <include reference="hdm-zQ-9cQ"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outlet property="emailLabel" destination="Dfn-66-xEx" id="e7G-mc-5YG"/>
+                            <outlet property="emailLine" destination="iYz-pd-arO" id="VjL-Ot-p3R"/>
+                            <outlet property="emailStackView" destination="1tD-bE-av2" id="bgb-HO-gDK"/>
+                            <outlet property="emailTextField" destination="Rxy-Vv-zBo" id="gex-3J-vJF"/>
+                            <outlet property="forgotPasswordButton" destination="eyJ-Yd-9Qr" id="9mt-sG-Ush"/>
+                            <outlet property="goToFeedButton" destination="Hl3-7E-jJc" id="wga-U7-v8U"/>
+                            <outlet property="loginButton" destination="zzE-zY-b7h" id="GxM-9d-Zk2"/>
+                            <outlet property="loginTitleLabel" destination="1uf-cz-J8g" id="SW3-Kh-dj3"/>
+                            <outlet property="otherButtonsStackView" destination="LGr-g6-zgj" id="IJV-mc-3Tt"/>
+                            <outlet property="passwordLabel" destination="a86-DL-3bz" id="atE-u1-PkE"/>
+                            <outlet property="passwordLine" destination="TDH-rk-5qy" id="s5p-4E-6Hv"/>
+                            <outlet property="passwordLineLeftConstraint" destination="wvp-Pl-tGP" id="IkY-CW-dq0"/>
+                            <outlet property="passwordStackView" destination="HCU-Hw-752" id="ZdR-by-ciI"/>
+                            <outlet property="passwordTextField" destination="nGW-J9-8dJ" id="LFS-Hp-IjD"/>
+                            <outlet property="signUpButton" destination="0JE-vt-kFs" id="fJa-Gv-TGg"/>
+                            <outlet property="usernameLineLeftConstraint" destination="0ZL-JG-ADf" id="AGg-fC-JBl"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="O8l-bT-vS9">
+                        <barButtonItem key="backBarButtonItem" title=" " id="jMF-Ey-OBI">
+                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loginView" destination="8bC-Xf-vdC" id="2PV-Cf-xNu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8359375" y="-36.896046852122986"/>
+        </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="1mO-Tt-qvV">
+            <objects>
+                <viewController storyboardIdentifier="ForgotPasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="km0-O9-gH8" customClass="ForgotPasswordViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GJd-Cr-6Sp" customClass="ForgotPasswordView" customModule="SumLit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m1S-p7-yq7">
+                                <rect key="frame" x="36" y="88" width="312.66666666666669" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="vSW-3U-gwO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato Black" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vSW-3U-gwO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="vSW-3U-gwO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Lato-Black" family="Lato Black" pointSize="67"/>
+                                    <mask key="constraints">
+                                        <include reference="vSW-3U-gwO"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGG-uO-WIC" customClass="AnimatedButton" customModule="SumLit" customModuleProvider="target">
+                                <rect key="frame" x="75" y="323" width="225" height="55"/>
+                                <color key="backgroundColor" name="SLOrange"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="jtd-Pw-iQQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <state key="normal" title="Send reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jtd-Pw-iQQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="jtd-Pw-iQQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="42"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetPassword:" destination="km0-O9-gH8" eventType="touchUpInside" id="YdT-WY-xyY"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="xqf-CW-zJx">
+                                <rect key="frame" x="36" y="232" width="309" height="35"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="BFT-Na-l3v">
+                                        <rect key="frame" x="0.0" y="0.0" width="309" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sgp-oH-Zfa">
+                                                <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" placeholder="YES" id="18T-hH-DIg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="18T-hH-DIg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="29"/>
+                                                </variation>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hCd-dC-uCI">
+                                                <rect key="frame" x="61.666666666666671" y="0.0" width="247.33333333333331" height="25"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="29"/>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="km0-O9-gH8" id="nSU-ZQ-fRO"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A85-kB-xE6">
+                                        <rect key="frame" x="0.0" y="34" width="309" height="1"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsp-qa-xSP">
+                                                <rect key="frame" x="0.0" y="0.0" width="309" height="1"/>
+                                                <color key="backgroundColor" red="0.63915830849999999" green="0.63925248379999999" blue="0.63913768530000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="h6I-Xf-YcE"/>
+                                            <constraint firstItem="Vsp-qa-xSP" firstAttribute="height" secondItem="A85-kB-xE6" secondAttribute="height" id="nuI-cn-Z5r"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vsp-qa-xSP" firstAttribute="leading" secondItem="xqf-CW-zJx" secondAttribute="leading" id="AaU-bM-78p"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vsp-qa-xSP" secondAttribute="trailing" id="VPo-xZ-rUU"/>
+                                    <constraint firstAttribute="width" constant="400" id="cOb-vG-sDl"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vsp-qa-xSP" secondAttribute="bottom" id="eTR-iU-48t"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cOb-vG-sDl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="cOb-vG-sDl"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iGG-uO-WIC" firstAttribute="height" secondItem="kED-Qr-sad" secondAttribute="height" multiplier="8%" id="023-Oe-ppB"/>
+                            <constraint firstItem="iGG-uO-WIC" firstAttribute="height" relation="greaterThanOrEqual" secondItem="kED-Qr-sad" secondAttribute="height" multiplier="10.5%" id="1i4-cb-Ujh"/>
+                            <constraint firstItem="iGG-uO-WIC" firstAttribute="width" secondItem="GJd-Cr-6Sp" secondAttribute="width" id="5gV-mh-bGf"/>
+                            <constraint firstItem="m1S-p7-yq7" firstAttribute="top" secondItem="kED-Qr-sad" secondAttribute="top" id="67K-Xz-s63">
+                                <variation key="heightClass=regular-widthClass=regular" constant="108"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="iGG-uO-WIC" secondAttribute="bottom" id="77Z-cL-Xtx"/>
+                            <constraint firstItem="iGG-uO-WIC" firstAttribute="trailing" secondItem="xqf-CW-zJx" secondAttribute="trailing" id="BAJ-hb-KQr"/>
+                            <constraint firstItem="iGG-uO-WIC" firstAttribute="leading" secondItem="xqf-CW-zJx" secondAttribute="leading" id="Jrd-8R-CRx"/>
+                            <constraint firstItem="m1S-p7-yq7" firstAttribute="leading" secondItem="kED-Qr-sad" secondAttribute="leading" constant="36" id="LBJ-u0-Js8">
+                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                            </constraint>
+                            <constraint firstItem="kED-Qr-sad" firstAttribute="trailing" secondItem="xqf-CW-zJx" secondAttribute="trailing" constant="30" id="NjQ-Tm-AyN">
+                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                            </constraint>
+                            <constraint firstItem="iGG-uO-WIC" firstAttribute="centerX" secondItem="GJd-Cr-6Sp" secondAttribute="centerX" id="TTr-zx-6zC"/>
+                            <constraint firstItem="iGG-uO-WIC" firstAttribute="top" secondItem="xqf-CW-zJx" secondAttribute="bottom" constant="56" id="btn-DA-Gzw"/>
+                            <constraint firstItem="xqf-CW-zJx" firstAttribute="top" secondItem="m1S-p7-yq7" secondAttribute="bottom" constant="96" id="dhj-uP-xd4"/>
+                            <constraint firstItem="iGG-uO-WIC" firstAttribute="height" secondItem="GJd-Cr-6Sp" secondAttribute="height" multiplier="13%" id="f1I-jz-Nmb"/>
+                            <constraint firstItem="iGG-uO-WIC" firstAttribute="centerX" secondItem="GJd-Cr-6Sp" secondAttribute="centerX" id="iI6-wd-YMg"/>
+                            <constraint firstItem="kED-Qr-sad" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m1S-p7-yq7" secondAttribute="trailing" symbolic="YES" id="ltI-d4-QWd"/>
+                            <constraint firstItem="xqf-CW-zJx" firstAttribute="leading" secondItem="kED-Qr-sad" secondAttribute="leading" constant="36" id="z75-PO-LhJ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                            </constraint>
+                            <constraint firstItem="iGG-uO-WIC" firstAttribute="width" secondItem="GJd-Cr-6Sp" secondAttribute="width" multiplier="60%" id="zOR-8c-4cH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kED-Qr-sad"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="023-Oe-ppB"/>
+                                <exclude reference="1i4-cb-Ujh"/>
+                                <exclude reference="5gV-mh-bGf"/>
+                                <exclude reference="BAJ-hb-KQr"/>
+                                <exclude reference="Jrd-8R-CRx"/>
+                                <exclude reference="TTr-zx-6zC"/>
+                                <exclude reference="f1I-jz-Nmb"/>
+                                <exclude reference="iI6-wd-YMg"/>
+                                <exclude reference="zOR-8c-4cH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="023-Oe-ppB"/>
+                                <exclude reference="77Z-cL-Xtx"/>
+                                <include reference="TTr-zx-6zC"/>
+                                <include reference="zOR-8c-4cH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="NjQ-Tm-AyN"/>
+                                <exclude reference="1i4-cb-Ujh"/>
+                                <include reference="5gV-mh-bGf"/>
+                                <exclude reference="BAJ-hb-KQr"/>
+                                <exclude reference="Jrd-8R-CRx"/>
+                                <exclude reference="btn-DA-Gzw"/>
+                                <include reference="f1I-jz-Nmb"/>
+                                <include reference="iI6-wd-YMg"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outlet property="emailLabel" destination="Sgp-oH-Zfa" id="Xfa-uL-wbc"/>
+                            <outlet property="emailLine" destination="A85-kB-xE6" id="o0u-dh-Idg"/>
+                            <outlet property="emailLineLeadingConstraint" destination="AaU-bM-78p" id="ntN-rP-t2i"/>
+                            <outlet property="emailStackView" destination="xqf-CW-zJx" id="tsb-UI-YlV"/>
+                            <outlet property="emailTextField" destination="hCd-dC-uCI" id="wy1-Tv-KP9"/>
+                            <outlet property="passwordResetButton" destination="iGG-uO-WIC" id="IRA-YL-X29"/>
+                            <outlet property="titleLabel" destination="m1S-p7-yq7" id="sNE-jq-oAC"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="forgotPasswordView" destination="GJd-Cr-6Sp" id="7Y8-Uv-Wu4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Cl-Uk-n7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="720.6521739130435"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="604-ML-4VI">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qBt-dg-ZCg" customClass="SignUpViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q16-gD-teY" customClass="SignUpView" customModule="SumLit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edd-ND-8S7">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-vl-Fat">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="499.66666666666669"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5eQ-ZA-dc0">
+                                                <rect key="frame" x="36" y="135.66666666666666" width="303" height="164.99999999999997"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-R1-DSB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="35"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DNm-3m-Z1x">
+                                                                <rect key="frame" x="0.0" y="0.0" width="303" height="25"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KZJ-Jb-mPw">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="88.666666666666671" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="91" id="L6f-Of-F3m"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <variation key="default">
+                                                                            <mask key="constraints">
+                                                                                <exclude reference="L6f-Of-F3m"/>
+                                                                            </mask>
+                                                                        </variation>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="29"/>
+                                                                        </variation>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="t6a-sd-1ZA">
+                                                                        <rect key="frame" x="98.666666666666643" y="0.0" width="204.33333333333337" height="25"/>
+                                                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="29"/>
+                                                                        </variation>
+                                                                        <connections>
+                                                                            <outlet property="delegate" destination="qBt-dg-ZCg" id="onT-gj-EzK"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQ6-2d-vCG">
+                                                                <rect key="frame" x="0.0" y="34.000000000000028" width="303" height="1"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQr-Lu-IvF">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="1"/>
+                                                                        <color key="backgroundColor" red="0.63915830849999999" green="0.63925248379999999" blue="0.63913768530000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="gBm-5y-xrw"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="e2I-lR-n1P"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="SQr-Lu-IvF" secondAttribute="trailing" id="1Sk-sr-efW"/>
+                                                            <constraint firstAttribute="bottom" secondItem="SQr-Lu-IvF" secondAttribute="bottom" id="T1s-pd-V3l"/>
+                                                            <constraint firstItem="SQr-Lu-IvF" firstAttribute="leading" secondItem="q2Z-R1-DSB" secondAttribute="leading" id="uX8-EL-P5J"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="S4K-kl-lIh">
+                                                        <rect key="frame" x="0.0" y="65.000000000000028" width="303" height="35"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="c9Z-jl-c7X">
+                                                                <rect key="frame" x="0.0" y="0.0" width="303" height="25"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhp-kd-WAb">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="29"/>
+                                                                        </variation>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-rk-b5H">
+                                                                        <rect key="frame" x="61.666666666666671" y="0.0" width="241.33333333333331" height="25"/>
+                                                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="29"/>
+                                                                        </variation>
+                                                                        <connections>
+                                                                            <outlet property="delegate" destination="qBt-dg-ZCg" id="0Id-zd-xtD"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmw-64-khu">
+                                                                <rect key="frame" x="0.0" y="34" width="303" height="1"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLM-d4-6pD">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="1"/>
+                                                                        <color key="backgroundColor" red="0.63915830849999999" green="0.63925248379999999" blue="0.63913768530000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="ZuW-cb-xvF"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="hpo-6K-mkx"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="vLM-d4-6pD" firstAttribute="leading" secondItem="S4K-kl-lIh" secondAttribute="leading" id="9q0-sa-5el"/>
+                                                            <constraint firstAttribute="trailing" secondItem="vLM-d4-6pD" secondAttribute="trailing" id="I4W-qi-D8O"/>
+                                                            <constraint firstAttribute="bottom" secondItem="vLM-d4-6pD" secondAttribute="bottom" id="LmJ-i0-eYj"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Izu-Fs-cxg">
+                                                        <rect key="frame" x="0.0" y="130.00000000000003" width="303" height="35"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="plS-WC-CPS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="303" height="25"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIa-jJ-YYn">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="29"/>
+                                                                        </variation>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="a0A-Lx-LC7">
+                                                                        <rect key="frame" x="101.66666666666664" y="0.0" width="201.33333333333337" height="25"/>
+                                                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="29"/>
+                                                                        </variation>
+                                                                        <connections>
+                                                                            <outlet property="delegate" destination="qBt-dg-ZCg" id="UgW-fS-EHq"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUi-ju-o6g">
+                                                                <rect key="frame" x="0.0" y="34" width="303" height="1"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skV-hN-UTI">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="1"/>
+                                                                        <color key="backgroundColor" red="0.63915830849999999" green="0.63925248379999999" blue="0.63913768530000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="5aT-gL-vMa"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="iyf-F9-XNn"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="skV-hN-UTI" firstAttribute="leading" secondItem="Izu-Fs-cxg" secondAttribute="leading" id="3st-4a-o4f"/>
+                                                            <constraint firstAttribute="trailing" secondItem="skV-hN-UTI" secondAttribute="trailing" id="OIu-EV-923"/>
+                                                            <constraint firstAttribute="bottom" secondItem="skV-hN-UTI" secondAttribute="bottom" id="vfn-eH-bsn"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="FOM-ed-Eqp"/>
+                                                    <constraint firstItem="Jhp-kd-WAb" firstAttribute="width" secondItem="KZJ-Jb-mPw" secondAttribute="width" id="OeR-44-tLU"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="FOM-ed-Eqp"/>
+                                                        <exclude reference="OeR-44-tLU"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" spacing="50">
+                                                    <mask key="constraints">
+                                                        <include reference="FOM-ed-Eqp"/>
+                                                    </mask>
+                                                </variation>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2bI-hQ-UCh">
+                                                <rect key="frame" x="36" y="0.0" width="209" height="95.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato Black" pointSize="41"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Lato-Black" family="Lato Black" pointSize="67"/>
+                                                </variation>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ8-SW-jbo" customClass="AnimatedButton" customModule="SumLit" customModuleProvider="target">
+                                                <rect key="frame" x="75" y="372.66666666666669" width="225" height="55"/>
+                                                <color key="backgroundColor" name="SLOrange"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="5BO-Hm-ZfA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                <state key="normal" title="Sign up">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="5BO-Hm-ZfA"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="5BO-Hm-ZfA"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="42"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="createAccount:" destination="qBt-dg-ZCg" eventType="touchUpInside" id="lda-Nt-J7d"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ZJ8-SW-jbo" firstAttribute="height" secondItem="ELP-vl-Fat" secondAttribute="height" multiplier="13%" id="6Gp-jl-ef4"/>
+                                            <constraint firstItem="ZJ8-SW-jbo" firstAttribute="width" secondItem="ELP-vl-Fat" secondAttribute="width" id="A68-uF-rsC"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZJ8-SW-jbo" secondAttribute="bottom" id="Bur-9f-h9n"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2bI-hQ-UCh" secondAttribute="trailing" constant="20" symbolic="YES" id="Ecf-Nu-9IH"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZJ8-SW-jbo" secondAttribute="bottom" constant="72" id="Hzu-3m-4GH"/>
+                                            <constraint firstItem="5eQ-ZA-dc0" firstAttribute="leading" secondItem="ELP-vl-Fat" secondAttribute="leading" constant="36" id="KKf-z8-djL">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
+                                            <constraint firstItem="ZJ8-SW-jbo" firstAttribute="centerX" secondItem="5eQ-ZA-dc0" secondAttribute="centerX" id="KV2-vP-m3e"/>
+                                            <constraint firstItem="ZJ8-SW-jbo" firstAttribute="leading" secondItem="5eQ-ZA-dc0" secondAttribute="leading" id="KxN-fN-ZfG"/>
+                                            <constraint firstItem="ZJ8-SW-jbo" firstAttribute="trailing" secondItem="5eQ-ZA-dc0" secondAttribute="trailing" id="LXC-tq-CdU"/>
+                                            <constraint firstItem="5eQ-ZA-dc0" firstAttribute="top" secondItem="2bI-hQ-UCh" secondAttribute="bottom" constant="63" id="OJt-7H-l6j">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                            </constraint>
+                                            <constraint firstItem="ZJ8-SW-jbo" firstAttribute="width" secondItem="ELP-vl-Fat" secondAttribute="width" multiplier="60%" id="Pf6-SI-9XP"/>
+                                            <constraint firstItem="2bI-hQ-UCh" firstAttribute="top" secondItem="ELP-vl-Fat" secondAttribute="top" id="Pxe-bW-BXb">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="108"/>
+                                            </constraint>
+                                            <constraint firstItem="2bI-hQ-UCh" firstAttribute="leading" secondItem="ELP-vl-Fat" secondAttribute="leading" constant="36" id="Z0e-9p-BnT">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="5eQ-ZA-dc0" secondAttribute="trailing" constant="36" id="dcP-6Q-Wy8">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
+                                            <constraint firstItem="ZJ8-SW-jbo" firstAttribute="top" secondItem="5eQ-ZA-dc0" secondAttribute="bottom" constant="72" id="hYZ-iY-Zbd"/>
+                                            <constraint firstItem="ZJ8-SW-jbo" firstAttribute="centerX" secondItem="ELP-vl-Fat" secondAttribute="centerX" id="y7u-DR-Top"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6Gp-jl-ef4"/>
+                                                <exclude reference="A68-uF-rsC"/>
+                                                <exclude reference="Bur-9f-h9n"/>
+                                                <exclude reference="KV2-vP-m3e"/>
+                                                <exclude reference="KxN-fN-ZfG"/>
+                                                <exclude reference="LXC-tq-CdU"/>
+                                                <exclude reference="Pf6-SI-9XP"/>
+                                                <exclude reference="hYZ-iY-Zbd"/>
+                                                <exclude reference="y7u-DR-Top"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="Bur-9f-h9n"/>
+                                                <include reference="KV2-vP-m3e"/>
+                                                <include reference="Pf6-SI-9XP"/>
+                                                <include reference="hYZ-iY-Zbd"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="dcP-6Q-Wy8"/>
+                                                <include reference="6Gp-jl-ef4"/>
+                                                <include reference="A68-uF-rsC"/>
+                                                <include reference="Bur-9f-h9n"/>
+                                                <exclude reference="Hzu-3m-4GH"/>
+                                                <exclude reference="KV2-vP-m3e"/>
+                                                <exclude reference="KxN-fN-ZfG"/>
+                                                <exclude reference="LXC-tq-CdU"/>
+                                                <exclude reference="hYZ-iY-Zbd"/>
+                                                <include reference="y7u-DR-Top"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ELP-vl-Fat" firstAttribute="width" secondItem="Edd-ND-8S7" secondAttribute="width" id="2aR-JY-Yvc"/>
+                                    <constraint firstItem="ELP-vl-Fat" firstAttribute="height" secondItem="Edd-ND-8S7" secondAttribute="height" priority="250" id="HuZ-U4-CIq"/>
+                                    <constraint firstItem="ELP-vl-Fat" firstAttribute="top" secondItem="Edd-ND-8S7" secondAttribute="top" id="OdX-Yj-jhF"/>
+                                    <constraint firstAttribute="trailing" secondItem="ELP-vl-Fat" secondAttribute="trailing" id="fRC-WO-xmb"/>
+                                    <constraint firstItem="ELP-vl-Fat" firstAttribute="height" secondItem="Edd-ND-8S7" secondAttribute="height" id="gRz-Ml-Kme"/>
+                                    <constraint firstItem="ELP-vl-Fat" firstAttribute="leading" secondItem="Edd-ND-8S7" secondAttribute="leading" id="kmP-m7-Nt6"/>
+                                    <constraint firstAttribute="bottom" secondItem="ELP-vl-Fat" secondAttribute="bottom" id="tXk-bq-o9g"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HuZ-U4-CIq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="gRz-Ml-Kme"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jSL-No-rqa" firstAttribute="bottom" secondItem="Edd-ND-8S7" secondAttribute="bottom" id="Uml-dw-rfK"/>
+                            <constraint firstItem="Edd-ND-8S7" firstAttribute="width" relation="lessThanOrEqual" secondItem="Q16-gD-teY" secondAttribute="width" id="WNW-TZ-afZ"/>
+                            <constraint firstItem="Edd-ND-8S7" firstAttribute="top" secondItem="jSL-No-rqa" secondAttribute="top" id="bca-fU-m9J"/>
+                            <constraint firstItem="Edd-ND-8S7" firstAttribute="leading" secondItem="jSL-No-rqa" secondAttribute="leading" id="chT-nw-jDT"/>
+                            <constraint firstAttribute="trailing" secondItem="Edd-ND-8S7" secondAttribute="trailing" id="icR-AX-SSa"/>
+                            <constraint firstItem="ZJ8-SW-jbo" firstAttribute="height" secondItem="jSL-No-rqa" secondAttribute="height" multiplier="8%" id="yGo-eG-5nd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jSL-No-rqa"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="yGo-eG-5nd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="yGo-eG-5nd"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outlet property="emailLabel" destination="Jhp-kd-WAb" id="DoQ-tO-DAO"/>
+                            <outlet property="emailLine" destination="vmw-64-khu" id="oBG-bY-qXM"/>
+                            <outlet property="emailLineLeadingConstraint" destination="9q0-sa-5el" id="P8w-fK-LQK"/>
+                            <outlet property="emailStackView" destination="S4K-kl-lIh" id="pOQ-eW-vnH"/>
+                            <outlet property="emailTextField" destination="DTB-rk-b5H" id="pnV-yP-6mL"/>
+                            <outlet property="passwordLabel" destination="OIa-jJ-YYn" id="XF9-Zf-nYD"/>
+                            <outlet property="passwordLine" destination="dUi-ju-o6g" id="8Id-Vj-Xqp"/>
+                            <outlet property="passwordLineLeadingConstraint" destination="3st-4a-o4f" id="xbe-9Z-azR"/>
+                            <outlet property="passwordStackView" destination="Izu-Fs-cxg" id="iwK-5b-lv7"/>
+                            <outlet property="passwordTextField" destination="a0A-Lx-LC7" id="MFX-0T-YyO"/>
+                            <outlet property="scrollView" destination="Edd-ND-8S7" id="P6j-o1-oTU"/>
+                            <outlet property="signupButton" destination="ZJ8-SW-jbo" id="dTA-vX-7tr"/>
+                            <outlet property="titleLabel" destination="2bI-hQ-UCh" id="san-Wi-Y3m"/>
+                            <outlet property="usernameLabel" destination="KZJ-Jb-mPw" id="v5u-a7-fYX"/>
+                            <outlet property="usernameLine" destination="BQ6-2d-vCG" id="o6J-ON-ixC"/>
+                            <outlet property="usernameLineLeadingConstraint" destination="uX8-EL-P5J" id="e9L-ce-vgm"/>
+                            <outlet property="usernameStackView" destination="q2Z-R1-DSB" id="CaN-qE-8Nu"/>
+                            <outlet property="usernameTextField" destination="t6a-sd-1ZA" id="jQE-fL-qJb"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="signUpView" destination="Q16-gD-teY" id="1ak-V3-0DP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3NX-n8-54v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="-767.11956521739137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UgC-pT-GFi">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="z7c-tt-yAd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3FN-6h-Q3b">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="72o-zf-R21"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74j-0I-kxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="-36.684782608695656"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="SLOrange">
+            <color red="1" green="0.70588235294117652" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

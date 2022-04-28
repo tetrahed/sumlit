@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Community Guidelines View Controller-->
+        <scene sceneID="DO5-jE-E8W">
+            <objects>
+                <viewController storyboardIdentifier="CommunityGuidelinesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="soa-fj-93c" customClass="CommunityGuidelinesViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pqy-85-Oq5" customClass="CommunityGuidelinesView" customModule="SumLit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRQ-tn-DDD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="label" size="12"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Cr-pB-shB" firstAttribute="trailing" secondItem="GRQ-tn-DDD" secondAttribute="trailing" id="Jxl-7g-0od"/>
+                            <constraint firstItem="0Cr-pB-shB" firstAttribute="bottom" secondItem="GRQ-tn-DDD" secondAttribute="bottom" id="ZUW-AI-0k4"/>
+                            <constraint firstItem="GRQ-tn-DDD" firstAttribute="leading" secondItem="0Cr-pB-shB" secondAttribute="leading" id="bdV-Tp-m3i"/>
+                            <constraint firstItem="GRQ-tn-DDD" firstAttribute="top" secondItem="0Cr-pB-shB" secondAttribute="top" id="uEa-e4-cTR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Cr-pB-shB"/>
+                        <connections>
+                            <outlet property="rulesTextView" destination="GRQ-tn-DDD" id="wbO-WH-EPz"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="communityGuidelinesView" destination="pqy-85-Oq5" id="by1-VG-aVQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSR-rw-zN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="244"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l1e-ig-gVN">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Followers View Controller-->
+        <scene sceneID="HIZ-Ag-IE4">
+            <objects>
+                <viewController storyboardIdentifier="FollowersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l1e-ig-gVN" customClass="FollowersViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JvM-1b-LAQ" customClass="FollowersView" customModule="SumLit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="232-Hn-Rtc" userLabel="Nav Separator">
+                                <rect key="frame" x="0.0" y="44" width="375" height="0.3333333333333357"/>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.25" id="Ycc-9f-bDS"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U5M-C0-wrY">
+                                <rect key="frame" x="0.0" y="44.333333333333314" width="375" height="733.66666666666674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FollowersTableViewCell" rowHeight="170" id="jTM-ap-bjI" customClass="FollowersTableViewCell" customModule="SumLit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="170"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jTM-ap-bjI" id="Z5O-Hk-WF0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" image="profileDefaultBefore" translatesAutoresizingMaskIntoConstraints="NO" id="ST7-eL-433">
+                                                    <rect key="frame" x="16" y="60" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="gHh-jS-Lxd"/>
+                                                        <constraint firstAttribute="width" secondItem="ST7-eL-433" secondAttribute="height" multiplier="1:1" id="xz4-38-9yZ"/>
+                                                    </constraints>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="gHh-jS-Lxd"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SPz-za-2vi">
+                                                    <rect key="frame" x="90" y="60" width="222" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqb-IZ-exQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="23"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
+                                                            </variation>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V4-Hi-fcH">
+                                                            <rect key="frame" x="0.0" y="27" width="31" height="23"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <variation key="heightClass=regular-widthClass=regular" alignment="center" axis="horizontal" distribution="equalSpacing" spacingType="standard"/>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6R-WL-C9u" userLabel="Bottom Separator">
+                                                    <rect key="frame" x="90" y="169.66666666666666" width="285" height="0.33333333333334281"/>
+                                                    <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="yLm-GL-aMR"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="SPz-za-2vi" firstAttribute="top" secondItem="Z5O-Hk-WF0" secondAttribute="top" constant="8" id="4We-Yz-DEq"/>
+                                                <constraint firstItem="Z6R-WL-C9u" firstAttribute="top" secondItem="SPz-za-2vi" secondAttribute="bottom" constant="9" id="CSa-kk-KsN"/>
+                                                <constraint firstAttribute="bottom" secondItem="Z6R-WL-C9u" secondAttribute="bottom" id="GVo-Hv-75M"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SPz-za-2vi" secondAttribute="trailing" constant="48" id="OBC-4X-Kdk"/>
+                                                <constraint firstItem="SPz-za-2vi" firstAttribute="centerY" secondItem="Z5O-Hk-WF0" secondAttribute="centerY" id="OQs-cd-cFk"/>
+                                                <constraint firstItem="ST7-eL-433" firstAttribute="leading" secondItem="Z5O-Hk-WF0" secondAttribute="leading" constant="16" id="Rub-Jg-rEL"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z6R-WL-C9u" secondAttribute="trailing" id="UkZ-MH-loT"/>
+                                                <constraint firstItem="SPz-za-2vi" firstAttribute="centerY" secondItem="Z5O-Hk-WF0" secondAttribute="centerY" id="WhE-83-IZr"/>
+                                                <constraint firstItem="Z6R-WL-C9u" firstAttribute="leading" secondItem="SPz-za-2vi" secondAttribute="leading" id="g0N-UJ-Axl"/>
+                                                <constraint firstItem="SPz-za-2vi" firstAttribute="leading" secondItem="ST7-eL-433" secondAttribute="trailing" constant="24" id="ijp-3A-Zgp"/>
+                                                <constraint firstItem="ST7-eL-433" firstAttribute="centerY" secondItem="SPz-za-2vi" secondAttribute="centerY" id="s7x-y0-HQa"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="4We-Yz-DEq"/>
+                                                    <exclude reference="WhE-83-IZr"/>
+                                                    <exclude reference="CSa-kk-KsN"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <exclude reference="CSa-kk-KsN"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <mask key="constraints">
+                                                    <exclude reference="4We-Yz-DEq"/>
+                                                    <include reference="WhE-83-IZr"/>
+                                                    <exclude reference="CSa-kk-KsN"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="followedTimeStampLabel" destination="5V4-Hi-fcH" id="RQh-xr-B0H"/>
+                                            <outlet property="profilePictureImageView" destination="ST7-eL-433" id="hL0-P0-YAl"/>
+                                            <outlet property="profileWidthConstraint" destination="gHh-jS-Lxd" id="h2A-5B-pyl"/>
+                                            <outlet property="usernameLabel" destination="Iqb-IZ-exQ" id="14G-Fg-QWB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="l1e-ig-gVN" id="8sm-e5-JAS"/>
+                                    <outlet property="delegate" destination="l1e-ig-gVN" id="edA-SS-FwU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="U5M-C0-wrY" firstAttribute="top" secondItem="232-Hn-Rtc" secondAttribute="bottom" id="GFP-Wu-DXX"/>
+                            <constraint firstItem="KDu-q1-rKj" firstAttribute="trailing" secondItem="U5M-C0-wrY" secondAttribute="trailing" id="N6Y-nS-yGj"/>
+                            <constraint firstItem="KDu-q1-rKj" firstAttribute="bottom" secondItem="U5M-C0-wrY" secondAttribute="bottom" id="Prw-Sw-gcp"/>
+                            <constraint firstItem="KDu-q1-rKj" firstAttribute="trailing" secondItem="232-Hn-Rtc" secondAttribute="trailing" id="QRa-VQ-w74"/>
+                            <constraint firstItem="232-Hn-Rtc" firstAttribute="leading" secondItem="KDu-q1-rKj" secondAttribute="leading" id="SNZ-S9-ox2"/>
+                            <constraint firstItem="232-Hn-Rtc" firstAttribute="top" secondItem="KDu-q1-rKj" secondAttribute="top" id="Wnp-mB-Pm9"/>
+                            <constraint firstItem="U5M-C0-wrY" firstAttribute="leading" secondItem="KDu-q1-rKj" secondAttribute="leading" id="X5b-5B-ZBm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KDu-q1-rKj"/>
+                        <connections>
+                            <outlet property="tableView" destination="U5M-C0-wrY" id="w7X-Cl-XXx"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="followersView" destination="JvM-1b-LAQ" id="goe-bf-cUC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFc-sX-OcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2463768115942031" y="-38.169642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="profileDefaultBefore" width="182" height="182"/>
+    </resources>
+</document>

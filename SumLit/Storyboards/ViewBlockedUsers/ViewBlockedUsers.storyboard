@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YJG-lB-Azs">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Blocked Users View Controller-->
+        <scene sceneID="e4C-KM-fgR">
+            <objects>
+                <viewController storyboardIdentifier="ViewBlockedUsersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJG-lB-Azs" customClass="ViewBlockedUsersViewController" customModule="SumLit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dgn-nn-eIU" customClass="ViewBlockedUsersView" customModule="SumLit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGf-70-1jX" userLabel="Nav Separator">
+                                <rect key="frame" x="0.0" y="44" width="414" height="0.3333333333333357"/>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.25" id="9ES-wW-E5j"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-PH-ukj">
+                                <rect key="frame" x="0.0" y="44.333333333333314" width="414" height="817.66666666666674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BlockedUsersTableViewCell" rowHeight="104" id="Mzc-TN-LmA" customClass="BlockedUsersTableViewCell" customModule="SumLit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mzc-TN-LmA" id="wcM-cB-gwz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Tvw-UI-lXa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="rlo-wO-QJ9"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KAt-Ox-mA6">
+                                                    <rect key="frame" x="16" y="8" width="382" height="87.666666666666671"/>
+                                                    <subviews>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="lcm-Qk-IrG">
+                                                            <rect key="frame" x="0.0" y="33.333333333333336" width="44.333333333333336" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="XZZ-NG-aSY"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                            </variation>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JU4-cD-rhb">
+                                                            <rect key="frame" x="262" y="21.333333333333329" width="120" height="45"/>
+                                                            <color key="backgroundColor" name="SLOrange"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="120" id="aRt-t4-Biw">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="175"/>
+                                                                </constraint>
+                                                                <constraint firstAttribute="height" constant="45" id="xuq-Gc-Wcz">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="55"/>
+                                                                </constraint>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                            <state key="normal" title="Unblock">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                            </variation>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="Z5N-jB-qyK"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Z5N-jB-qyK"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Z5N-jB-qyK"/>
+                                                        </mask>
+                                                    </variation>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Tc-vW-R0a" userLabel="Bottom Separator">
+                                                    <rect key="frame" x="16" y="103.66666666666667" width="398" height="0.3333333333333286"/>
+                                                    <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="ENl-E6-vA0"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="KAt-Ox-mA6" secondAttribute="trailing" constant="16" id="AZZ-BP-lmh">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="48"/>
+                                                </constraint>
+                                                <constraint firstAttribute="bottom" secondItem="Tvw-UI-lXa" secondAttribute="bottom" id="GIx-Y8-kh7"/>
+                                                <constraint firstItem="Tvw-UI-lXa" firstAttribute="leading" secondItem="wcM-cB-gwz" secondAttribute="leading" id="HW9-ly-vg8"/>
+                                                <constraint firstItem="Tvw-UI-lXa" firstAttribute="top" secondItem="wcM-cB-gwz" secondAttribute="top" id="J2N-ag-7DP"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tvw-UI-lXa" secondAttribute="trailing" id="MBD-Jg-N7N"/>
+                                                <constraint firstItem="KAt-Ox-mA6" firstAttribute="leading" secondItem="wcM-cB-gwz" secondAttribute="leading" constant="16" id="O7O-XK-1sD">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="84"/>
+                                                </constraint>
+                                                <constraint firstItem="1Tc-vW-R0a" firstAttribute="top" secondItem="KAt-Ox-mA6" secondAttribute="bottom" constant="8" id="P1Y-2j-V0T"/>
+                                                <constraint firstItem="1Tc-vW-R0a" firstAttribute="leading" secondItem="KAt-Ox-mA6" secondAttribute="leading" id="W59-FP-n42"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Tc-vW-R0a" secondAttribute="bottom" id="YBJ-a8-gL8"/>
+                                                <constraint firstItem="KAt-Ox-mA6" firstAttribute="top" secondItem="wcM-cB-gwz" secondAttribute="top" constant="8" id="ajV-Ic-hRj"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Tc-vW-R0a" secondAttribute="trailing" id="w80-Mf-Uqf"/>
+                                            </constraints>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <mask key="subviews">
+                                                    <include reference="Tvw-UI-lXa"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="unBlockButton" destination="JU4-cD-rhb" id="6Pp-IU-gcu"/>
+                                            <outlet property="usernameLabel" destination="lcm-Qk-IrG" id="rc6-3P-QK3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YJG-lB-Azs" id="4eF-qr-7Jx"/>
+                                    <outlet property="delegate" destination="YJG-lB-Azs" id="SrL-8g-n0S"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AQY-uh-g1C" firstAttribute="bottom" secondItem="Wbg-PH-ukj" secondAttribute="bottom" id="418-ot-lUo"/>
+                            <constraint firstItem="CGf-70-1jX" firstAttribute="top" secondItem="AQY-uh-g1C" secondAttribute="top" id="hvD-XO-b08"/>
+                            <constraint firstItem="AQY-uh-g1C" firstAttribute="trailing" secondItem="Wbg-PH-ukj" secondAttribute="trailing" id="iNm-93-Xw3"/>
+                            <constraint firstItem="AQY-uh-g1C" firstAttribute="trailing" secondItem="CGf-70-1jX" secondAttribute="trailing" id="mF4-P5-BEs"/>
+                            <constraint firstItem="Wbg-PH-ukj" firstAttribute="leading" secondItem="AQY-uh-g1C" secondAttribute="leading" id="rPG-Ba-Myd"/>
+                            <constraint firstItem="Wbg-PH-ukj" firstAttribute="top" secondItem="CGf-70-1jX" secondAttribute="bottom" id="rRK-KE-4US"/>
+                            <constraint firstItem="CGf-70-1jX" firstAttribute="leading" secondItem="AQY-uh-g1C" secondAttribute="leading" id="sin-Cb-U5t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AQY-uh-g1C"/>
+                        <connections>
+                            <outlet property="tableView" destination="Wbg-PH-ukj" id="43d-Ap-lq9"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="viewBlockedUsersView" destination="Dgn-nn-eIU" id="Fd5-Pr-U6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRj-vQ-zXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.3812949640288" y="231.4748201438849"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="SLOrange">
+            <color red="1" green="0.70588235294117652" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
